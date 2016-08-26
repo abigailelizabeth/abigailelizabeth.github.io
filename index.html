@@ -8,12 +8,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-/*
- * -- BASE STYLES --
- * Most of these are inherited from Base, but I want to change a few.
- */
-        .dropbtn {
+.dropbtn {
     background: #fafafa;
     float: right;
     padding: 16px;
@@ -56,6 +51,7 @@ body {
     color: #7f8c8d;
     font-size: 13px;
 }
+       
 
 
 .pure-img-responsive {
@@ -136,14 +132,6 @@ a.pure-button-primary {
 
 
 
-
-/*
- * -- SPLASH STYLES --
- * This is the blue top section that appears on the page.
- */
-
-
-
 /*
  * -- CONTENT STYLES --
  * This represents the content area (everything below the blue section)
@@ -191,9 +179,16 @@ a.pure-button-primary {
     background: #111;
 }
 
-
-
-    </style>
+        h1{
+            font-size: 1em;
+        }
+        h2{
+            font-size: 0.5em;
+        }
+        h3{
+            font-size: .17em;
+        }
+</style>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a responsive product landing page.">
@@ -265,15 +260,35 @@ a.pure-button-primary {
          
         
             <div class="infoBlock l-box-lrg">
-                <p>Education</p>
-                <ul>Texas State University
-                    <li>Bachelor of Science - Computer Science</li>
-                    <li><b>GPA:</b> 3.63</li>
+                <h3>Education</h3>
+                <ul>
+                    <li>
+                        <h4>Texas State University</h4>
+                        <ul>
+                            <li>Bachelor of Science - Computer Science</li>
+                            <li><b>GPA:</b> 3.63</li>
+                        </ul>
+                    </li>
                 </ul>
-                
             </div>
             <div class="infoBlock l-box-lrg">
-                <p>Experience</p>
+                <h3>Experience</h3>
+                <ul>
+                    <li>
+                        <h4>IT Intern - USAA</h4>
+                        <ul>
+                            <li>Built an end to end application to automate job processes on the mainframe</li>
+                            <li><b>Technologies:</b> 3.63</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Web Developer - Ingram School of Engineering</h4>
+                        <ul>
+                            <li>Built an end to end application to automate job processes on the mainframe</li>
+                            <li><b>Technologies:</b> 3.63</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="infoBlock l-box-lrg">
                 <p>Achievements</p>
@@ -331,7 +346,7 @@ a.pure-button-primary {
         </div>
     </div>
     <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
+        Email: abbyeb22@gmail.com
     </div>
 
 </div>
