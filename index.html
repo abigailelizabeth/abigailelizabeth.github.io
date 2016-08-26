@@ -3,181 +3,186 @@
 <head>
     <style>
     
-    * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.dropbtn {
-    background: #fafafa;
-    float: right;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+        * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+          }
+        .resume, .content{
+            width: 90%;
+            margin: auto;
+            border-radius: 25px;
+        }
+        .dropbtn {
+            background: #fafafa;
+            float: right;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: lightgray;
-}
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: lightgray;
+        }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: lightgray;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: lightgray;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-.dropdown a:hover {background-color: #f1f1f1}
+        .dropdown a:hover {background-color: #f1f1f1}
 
-.show {display:block;}
-        
-body {
-    line-height: 1.7em;
-    color: #7f8c8d;
-    font-size: 13px;
-}
-       
+        .show {display:block;}
 
-
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-/*
- * -- LAYOUT STYLES --
- * These are some useful classes which I will need
- */
-.l-box {
-    padding: 1em;
-}
-
-.l-box-lrg {
-    padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.is-center {
-    text-align: center;
-}
+        body {
+            line-height: 1.7em;
+            color: #7f8c8d;
+            font-size: 13px;
+        }
 
 
-#downloadPDF{
-    float: right;
-}
+
+        .pure-img-responsive {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*
+         * -- LAYOUT STYLES --
+         * These are some useful classes which I will need
+         */
+        .l-box {
+            padding: 1em;
+        }
+
+        .l-box-lrg {
+            padding: 2em;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .is-center {
+            text-align: center;
+        }
 
 
-/*
- * -- PURE BUTTON STYLES --
- * I want my pure-button elements to look a little different
- */
-.pure-button {
-    background-color: #1f8dd6;
-    color: white;
-    padding: 0.5em 2em;
-    border-radius: 5px;
-}
-
-a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
-    border-radius: 5px;
-    font-size: 120%;
-
-}
-
-
-/*
- * -- MENU STYLES --
- * I want to customize how my .pure-menu looks at the top of the page
- */
-
-.home-menu {
-    background: #fafafa;
-    padding: 0.5em;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
-.home-menu .dropdown{
+        #downloadPDF{
             float: right;
         }
 
-.pure-menu.pure-menu-fixed {
-    /* Fixed menus normally have a border at the bottom. */
-    border-bottom: none;
-    /* I need a higher z-index here because of the scroll-over effect. */
-    z-index: 4;
-}
 
-.home-menu .pure-menu-heading {
-    font-weight: 400;
-    font-size: 120%;
-}
+        /*
+         * -- PURE BUTTON STYLES --
+         * I want my pure-button elements to look a little different
+         */
+        .pure-button {
+            background-color: #1f8dd6;
+            color: white;
+            padding: 0.5em 2em;
+            border-radius: 5px;
+        }
+
+        a.pure-button-primary {
+            background: white;
+            color: #1f8dd6;
+            border-radius: 5px;
+            font-size: 120%;
+
+        }
+
+
+        /*
+         * -- MENU STYLES --
+         * I want to customize how my .pure-menu looks at the top of the page
+         */
+
+        .home-menu {
+            background: #fafafa;
+            padding: 0.5em;
+            text-align: center;
+            box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+        }
+        .home-menu .dropdown{
+                    float: right;
+                }
+
+        .pure-menu.pure-menu-fixed {
+            /* Fixed menus normally have a border at the bottom. */
+            border-bottom: none;
+            /* I need a higher z-index here because of the scroll-over effect. */
+            z-index: 4;
+        }
+
+        .home-menu .pure-menu-heading {
+            font-weight: 400;
+            font-size: 120%;
+        }
 
 
 
 
-/*
- * -- CONTENT STYLES --
- * This represents the content area (everything below the blue section)
- */
-.content-wrapper {
-    /* These styles are required for the "scroll-over" effect */
-    position: absolute;
-    top: 7%;
-    width: 100%;
-    min-height: 12%;
-    z-index: 2;
-    background: white;
+        /*
+         * -- CONTENT STYLES --
+         * This represents the content area (everything below the blue section)
+         */
+        .content-wrapper {
+            /* These styles are required for the "scroll-over" effect */
+            position: absolute;
+            top: 7%;
+            width: 100%;
+            min-height: 12%;
+            z-index: 2;
+            background: white;
 
-}
+        }
 
-/* This is the class used for the main content headers (<h2>) */
-.content-head {
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 2em 0 1em;
-}
+        /* This is the class used for the main content headers (<h2>) */
+        .content-head {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 2em 0 1em;
+        }
 
-/* This is a modifier class used when the content-head is inside a ribbon */
-.content-head-ribbon {
-    color: white;
-}
+        /* This is a modifier class used when the content-head is inside a ribbon */
+        .content-head-ribbon {
+            color: white;
+        }
 
-/* This is the class used for the content sub-headers (<h3>) */
-.content-subhead {
-    color: #1f8dd6;
-}
-    .content-subhead i {
-        margin-right: 7px;
-    }
+        /* This is the class used for the content sub-headers (<h3>) */
+        .content-subhead {
+            color: #1f8dd6;
+        }
+            .content-subhead i {
+                margin-right: 7px;
+            }
 
-/* This is the class used for the dark-background areas. */
-.ribbon {
-    background: #2d3e50;
-    color: #aaa;
-}
+        /* This is the class used for the dark-background areas. */
+        .ribbon {
+            background: #2d3e50;
+            color: #aaa;
+        }
 
-/* This is the class used for the footer */
-.footer {
-    background: #111;
-}
+        /* This is the class used for the footer */
+        .footer {
+            background: #111;
+        }
 
         h1{
             font-size: 1em;
@@ -188,168 +193,149 @@ a.pure-button-primary {
         h3{
             font-size: .17em;
         }
+        
 </style>
+    
+    
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
 
     <title>Abigail Barron</title>
-
     
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-
-
-
-    
-
-    
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
+    
 <body>
-
-
-
-
-
-
-
-
-
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="nameTitle pure-menu-heading" href="">Abigail E. Barron</a>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="glyphicon glyphicon-menu-hamburger dropbtn"></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="nameTitle pure-menu-heading" href="">Abigail E. Barron</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="glyphicon glyphicon-menu-hamburger dropbtn"></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-        </div>
-    </div>        
-</div>
-
-
-
-<div class="content-wrapper">
-    <div class="content">
-        <h2 class="content-head is-center">About Me</h2>
-
-        <div class="l-box">
-            <p>Hello! My name is Abigail Elizabeth Barron. I'm currently an undergrad student at Texas State University in San Marcos , TX, seeking a Computer Science Degree. </p>
-
-
-        </div>
+        </div>        
     </div>
 
-    <div class="ribbon">
 
-        <div class="pure-u-1 pure-g">
-            <div class="pure-u-1 content-head content-head-ribbon is-center">
-                <h2>Resume</h2>
-                <a id="downloadPDF" href="#downloadResume">Download as PDF</a>
+
+    <div class="content-wrapper">
+        <div class="content">
+            <h2 class="content-head is-center">About Me</h2>
+
+            <div class="l-box">
+                <p>Hello! My name is Abigail Elizabeth Barron. I'm currently an undergrad student at Texas State University in San Marcos , TX, seeking a Computer Science Degree. </p>
+
+
             </div>
-         
-        
-            <div class="infoBlock l-box-lrg">
-                <h3>Education</h3>
-                <ul>
-                    <li>
-                        <h4>Texas State University</h4>
-                        <ul>
-                            <li>Bachelor of Science - Computer Science</li>
-                            <li><b>GPA:</b> 3.63</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="infoBlock l-box-lrg">
-                <h3>Experience</h3>
-                <ul>
-                    <li>
-                        <h4>IT Intern - USAA</h4>
-                        <ul>
-                            <li>Built an end to end application to automate job processes on the mainframe</li>
-                            <li><b>Technologies:</b> 3.63</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Web Developer - Ingram School of Engineering</h4>
-                        <ul>
-                            <li>Built an end to end application to automate job processes on the mainframe</li>
-                            <li><b>Technologies:</b> 3.63</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="infoBlock l-box-lrg">
-                <p>Achievements</p>
-            </div>            
         </div>
-    </div>
 
-    <div class="content">
-        <h2 class="content-head is-center">Projects</h2>
+        <div class="ribbon resume">
 
-        
+            <div class="pure-u-1 pure-g ">
+                <div class="pure-u-1 content-head content-head-ribbon is-center">
+                    <h2>Resume</h2>
+                    <a id="downloadPDF" href="#downloadResume">Download as PDF</a>
+                </div>
 
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Me</h4>
+
+                <div class="infoBlock l-box-lrg">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>
+                            <h4>Texas State University</h4>
+                            <ul>
+                                <li>Bachelor of Science - Computer Science</li>
+                                <li><b>GPA:</b> 3.63</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infoBlock l-box-lrg">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>
+                            <h4>IT Intern - USAA</h4>
+                            <ul>
+                                <li>Built an end to end application to automate job processes on the mainframe</li>
+                                <li><b>Technologies:</b> 3.63</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Web Developer - Ingram School of Engineering</h4>
+                            <ul>
+                                <li>Built an end to end application to automate job processes on the mainframe</li>
+                                <li><b>Technologies:</b> 3.63</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infoBlock l-box-lrg">
+                    <p>Achievements</p>
+                </div>            
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 class="content-head is-center">Projects</h2>
+
+
+
+                <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                    <h4>Contact Me</h4>
+                    <p>
+
+                    </p>
+                    <div class="pure-g">
+                        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                            <form class="pure-form pure-form-stacked">
+                                <fieldset>
+
+                                    <label for="name">Your Name</label>
+                                    <input id="name" type="text" placeholder="Your Name">
+
+
+                                    <label for="email">Your Email</label>
+                                    <input id="email" type="email" placeholder="Your Email">
+
+                                    <label for="password">Your Message</label>
+                                    <textarea rows="4" cols="50"></textarea>
+
+                                    <button type="submit" class="pure-button">Send</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        </div>
+                    <h4>More Information</h4>
+                    <p>
+
+                    </p>
+
+            </div>
+
+        </div>
+        <div class="ribbon">
+
+            <div class="pure-u-1">
+
+                <h2 class="content-head content-head-ribbon is-center">Extracurricular</h2>
+
                 <p>
-                    
+
                 </p>
-                <div class="pure-g">
-                    <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                        <form class="pure-form pure-form-stacked">
-                            <fieldset>
-
-                                <label for="name">Your Name</label>
-                                <input id="name" type="text" placeholder="Your Name">
-
-
-                                <label for="email">Your Email</label>
-                                <input id="email" type="email" placeholder="Your Email">
-
-                                <label for="password">Your Message</label>
-                                <textarea rows="4" cols="50"></textarea>
-
-                                <button type="submit" class="pure-button">Send</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                    </div>
-                <h4>More Information</h4>
-                <p>
-                    
-                </p>
-            
+            </div>
+        </div>
+        <div class="footer l-box is-center">
+            Email: abbyeb22@gmail.com
         </div>
 
     </div>
-    <div class="ribbon">
-
-        <div class="pure-u-1">
-
-            <h2 class="content-head content-head-ribbon is-center">Extracurricular</h2>
-
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    <div class="footer l-box is-center">
-        Email: abbyeb22@gmail.com
-    </div>
-
-</div>
 
 
 
