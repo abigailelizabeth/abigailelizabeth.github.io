@@ -254,3 +254,9 @@
     overflow-y: hidden;
     white-space: nowrap;
 }
+.book{
+    height: 210px;
+    background-color: #6BB9F0;
+    width: 150px;
+    border-radius: 7px;
+}
