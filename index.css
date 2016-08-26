@@ -249,7 +249,6 @@
 #myWorkContent{
     width: auto;
     height:210px;
-    border: 13px solid #bed5cd;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
