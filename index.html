@@ -8,10 +8,19 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
           }
-        .resume, .content{
-            width: 90%;
+        .resume, .console{
+            width: 100%;
             margin: auto;
-            border-radius: 25px;
+        }
+        .console{
+            background-color: #ccc;
+            color: green;
+            border-radius: 5px;
+            font-family: "Monaco","Courier New"
+        }
+        .content{
+            background-color: #383737;
+            color: white;
         }
         .dropbtn {
             background: #fafafa;
@@ -183,15 +192,30 @@
         .footer {
             background: #111;
         }
-
-        h1{
+        @media only screen and (max-width: 768px){
+           h1{
             font-size: 1em;
+            }
+            h2{
+                font-size: 0.5em;
+            }
+            h3{
+                font-size: .17em;
+            }  
         }
-        h2{
-            font-size: 0.5em;
-        }
-        h3{
-            font-size: .17em;
+       
+        
+/*        here is where i add for larger screens*/
+        
+        @media only screen and (min-width: 768px){
+            .resume, .console{
+                width: 60%;
+
+            }
+            .resume{
+                border-radius: 25px;
+
+            }
         }
         
 </style>
@@ -226,21 +250,25 @@
 
 
     <div class="content-wrapper">
-        <div class="content">
-            <h2 class="content-head is-center">About Me</h2>
+        <h2 class="content-head is-center">About Me</h2>
+        <div class="console">
+            <p><b> _ X O</b></p>
+            <div class="content">
 
-            <div class="l-box">
-                <p>Hello! My name is Abigail Elizabeth Barron. I'm currently an undergrad student at Texas State University in San Marcos , TX, seeking a Computer Science Degree. </p>
+
+                <div class="l-box">
+                    <p> > Objective <br>Hello! My name is Abigail Elizabeth Barron. I'm currently an undergrad student at Texas State University in San Marcos , TX, seeking a Computer Science Degree. </p>
 
 
+                </div>
             </div>
         </div>
+                    <h2 class="is-center">Resume</h2>
 
         <div class="ribbon resume">
 
             <div class="pure-u-1 pure-g ">
                 <div class="pure-u-1 content-head content-head-ribbon is-center">
-                    <h2>Resume</h2>
                     <a id="downloadPDF" href="#downloadResume">Download as PDF</a>
                 </div>
 
@@ -305,7 +333,7 @@
                                     <input id="email" type="email" placeholder="Your Email">
 
                                     <label for="password">Your Message</label>
-                                    <textarea rows="4" cols="50"></textarea>
+                                    <textarea rows="4" cols="25"></textarea>
 
                                     <button type="submit" class="pure-button">Send</button>
                                 </fieldset>
