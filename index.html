@@ -8,7 +8,7 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
           }
-        .resume, .console{
+        .console{
             width: 100%;
             margin: auto;
         }
@@ -22,6 +22,14 @@
             background-color: #383737;
             color: white;
         }
+        .resume{
+            background-color: aliceblue
+        }
+        
+        table{
+            border-spacing: 4px;
+        }
+        
         .dropbtn {
             background: #fafafa;
             float: right;
@@ -183,10 +191,7 @@
             }
 
         /* This is the class used for the dark-background areas. */
-        .ribbon {
-            background: #2d3e50;
-            color: #aaa;
-        }
+        
 
         /* This is the class used for the footer */
         .footer {
@@ -208,14 +213,11 @@
 /*        here is where i add for larger screens*/
         
         @media only screen and (min-width: 768px){
-            .resume, .console{
+            .console{
                 width: 60%;
 
             }
-            .resume{
-                border-radius: 25px;
-
-            }
+            
         }
         
 </style>
@@ -257,58 +259,82 @@
 
 
                 <div class="l-box">
-                    <p> > Objective <br>Hello! My name is Abigail Elizabeth Barron. I'm currently an undergrad student at Texas State University in San Marcos , TX, seeking a Computer Science Degree. </p>
+                    <p> abigailbarron@mysite:~$ less objective.txt </p>
+                    <p><br>Hello! My name is Abigail Elizabeth Barron. I'm currently an undergrad student at Texas State University in San Marcos , TX, seeking a Computer Science Degree. My area of focus is web development Range: [backend, frontend] <br><br></p>
+                    <p> abigailbarron@mysite:~$ ^C </p>
+                    <p> abigailbarron@mysite:~$ ^C </p>
+                    <p> abigailbarron@mysite:~$ ls </p>
+
+                    <table style="width:100%">
+                        <tr>
+                            <td><a>Abby.java</a></td>
+                            <td><a>extracurricular.fun</a></td>
+                            <td><a>objective.txt</a></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td><a>projects</a></td>
+                            <td><a>resume.txt</a></td>
+                            
+                        </tr>
+                    </table>
+                    
+                    
+                    
 
 
                 </div>
             </div>
         </div>
-                    <h2 class="is-center">Resume</h2>
+                    <h2 class="content-head is-center">Resume</h2>
+        <div class="console">
+            <p><b> _ X O</b></p>
+            <div class="resume">
 
-        <div class="ribbon resume">
+                <div class="pure-u-1 pure-g ">
+                    <div class="pure-u-1 content-head content-head-ribbon is-center">
+                        <a id="downloadPDF" href="#downloadResume">Download as PDF</a>
+                    </div>
 
-            <div class="pure-u-1 pure-g ">
-                <div class="pure-u-1 content-head content-head-ribbon is-center">
-                    <a id="downloadPDF" href="#downloadResume">Download as PDF</a>
+
+                    <div class="infoBlock l-box-lrg">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>
+                                <h4>Texas State University</h4>
+                                <ul>
+                                    <li>Bachelor of Science - Computer Science</li>
+                                    <li><b>GPA:</b> 3.63</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="infoBlock l-box-lrg">
+                        <h3>Experience</h3>
+                        <ul>
+                            <li>
+                                <h4>IT Intern - USAA</h4>
+                                <ul>
+                                    <li>Built an end to end application to automate job processes on the mainframe</li>
+                                    <li><b>Technologies:</b> 3.63</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Web Developer - Ingram School of Engineering</h4>
+                                <ul>
+                                    <li>Built an end to end application to automate job processes on the mainframe</li>
+                                    <li><b>Technologies:</b> 3.63</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="infoBlock l-box-lrg">
+                        <p>Achievements</p>
+                    </div>            
                 </div>
-
-
-                <div class="infoBlock l-box-lrg">
-                    <h3>Education</h3>
-                    <ul>
-                        <li>
-                            <h4>Texas State University</h4>
-                            <ul>
-                                <li>Bachelor of Science - Computer Science</li>
-                                <li><b>GPA:</b> 3.63</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="infoBlock l-box-lrg">
-                    <h3>Experience</h3>
-                    <ul>
-                        <li>
-                            <h4>IT Intern - USAA</h4>
-                            <ul>
-                                <li>Built an end to end application to automate job processes on the mainframe</li>
-                                <li><b>Technologies:</b> 3.63</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h4>Web Developer - Ingram School of Engineering</h4>
-                            <ul>
-                                <li>Built an end to end application to automate job processes on the mainframe</li>
-                                <li><b>Technologies:</b> 3.63</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="infoBlock l-box-lrg">
-                    <p>Achievements</p>
-                </div>            
             </div>
-        </div>
+        </div>    
 
         <div class="content">
             <h2 class="content-head is-center">Projects</h2>
