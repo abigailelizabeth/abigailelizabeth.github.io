@@ -42,6 +42,16 @@
             border-spacing: 4px;
             width: 100%;
         }
+        .skillTopic{
+            font-size: 14px;
+            padding: 12px 0px 12px 0px;
+        }
+        .skillBag{
+            background-color: white;
+        }
+        .skillContainer{
+            height: 210px;
+        }
         .skill{
             border: 1px solid #50a9d1;
             border-radius: 8px;
