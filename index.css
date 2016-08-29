@@ -223,6 +223,9 @@
             background: #111;
         }
         @media only screen and (max-width: 768px){
+            .jobTechnologies{
+                display: none;
+            }
            h1{
             font-size: 1em;
             }
@@ -238,6 +241,10 @@
 /*        here is where i add for larger screens*/
         
         @media only screen and (min-width: 768px){
+            .jobTechnologies{
+                display: inline;
+                
+            }
             .console, .skillSet, .experience{
                 width: 60%;
 

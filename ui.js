@@ -4,6 +4,8 @@ $( document ).ready(function() {
     $("#frameworkList").hide();
     $("#operatingList").hide();
     $("#otherList").hide();
+    
+    // determine if mobile or not to hide certain divs
 
 
     
