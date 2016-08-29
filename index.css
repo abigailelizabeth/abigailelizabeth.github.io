@@ -18,6 +18,28 @@
             background-color: #383737;
             color: white;
         }
+.experience{
+    width: 100%;
+    margin: auto;
+}
+.experienceHead{
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+}
+.eatEmUp{
+    background-image: url(Logo%20Texas_State_University_Bobcats.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.img-container{
+    padding: 24px;
+}
+.toServe{
+    height: 100%;
+    background-image: url(USAA_auto_insurance.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
         .resume{
             background-color: #383737;
             padding: 0px 2px 4px 2px;
@@ -216,7 +238,7 @@
 /*        here is where i add for larger screens*/
         
         @media only screen and (min-width: 768px){
-            .console, .skillSet{
+            .console, .skillSet, .experience{
                 width: 60%;
 
             }
