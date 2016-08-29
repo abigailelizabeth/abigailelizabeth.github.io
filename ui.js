@@ -7,21 +7,25 @@ $( document ).ready(function() {
     
     $(".languages").click(function(e){
        e.preventDefault();
+        $(".languages").children("small").children("span").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
        $("#languageList").slideToggle();
     });
 
     $(".frameworks").click(function(e){
        e.preventDefault();
+        $(".frameworks").children("small").children("span").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
        $("#frameworkList").slideToggle();
     });
     
     $(".operating").click(function(e){
        e.preventDefault();
+        $(".operating").children("small").children("span").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
        $("#operatingList").slideToggle();
     });
     
     $(".other").click(function(e){
        e.preventDefault();
+        $(".other").children("small").children("span").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
        $("#otherList").slideToggle();
     });
 
