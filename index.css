@@ -44,10 +44,17 @@
         }
         .skillSetSub{
             color: #fafafa;
-            font-size: 160%;
             padding-top: 1%;
 
         }
+.listedSkills{
+    margin: auto;
+}
+
+        .btn p{
+         font-size: 120%;    
+        }
+
         .languages, .operating{
             background-color: #34495E;
 
@@ -55,6 +62,12 @@
         .frameworks, .other{
             background-color: #67809F;
         }
+.skillSet .skill{
+    border-color: #BDC3C7;
+    background-color: #BDC3C7;
+    font-size: 14px;
+    
+}
         .skill{
             border: 1px solid #50a9d1;
             border-radius: 8px;
