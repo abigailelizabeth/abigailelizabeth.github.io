@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    alert("noooo");
     
     $("#burgerIcon").click(function(e){
     alert("hi there you clicked the menu");
