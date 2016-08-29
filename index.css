@@ -4,7 +4,7 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
           }
-        .console{
+        .console, .skillSet{
             width: 100%;
             margin: auto;
         }
@@ -42,15 +42,18 @@
             border-spacing: 4px;
             width: 100%;
         }
-        .skillTopic{
-            font-size: 14px;
-            padding: 12px 0px 12px 0px;
+        .skillSetSub{
+            color: #fafafa;
+            font-size: 160%;
+            padding-top: 1%;
+
         }
-        .skillBag{
-            background-color: white;
+        .languages, .operating{
+            background-color: #34495E;
+
         }
-        .skillContainer{
-            height: 210px;
+        .frameworks, .other{
+            background-color: #67809F;
         }
         .skill{
             border: 1px solid #50a9d1;
@@ -135,33 +138,10 @@
         }
 
 
-        /*
-         * -- PURE BUTTON STYLES --
-         * I want my pure-button elements to look a little different
-         */
-        .pure-button {
-            background-color: #1f8dd6;
-            color: white;
-            padding: 0.5em 2em;
-            border-radius: 5px;
-        }
-
-        a.pure-button-primary {
-            background: white;
-            color: #1f8dd6;
-            border-radius: 5px;
-            font-size: 120%;
+        .pure-menu-heading{
+            font-size: 150%;
 
         }
-
-
-       
-
-
-.pure-menu-heading{
-    font-size: 150%;
-
-}
 
         /*
          * -- CONTENT STYLES --
@@ -222,7 +202,7 @@
 /*        here is where i add for larger screens*/
         
         @media only screen and (min-width: 768px){
-            .console{
+            .console, .skillSet{
                 width: 60%;
 
             }
@@ -238,10 +218,5 @@
     overflow-y: hidden;
     white-space: nowrap;
 }
-.book{
-    height: 210px;
-    background-color: #6BB9F0;
-    width: 150px;
-    border-radius: 7px;
-}
+
 
