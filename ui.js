@@ -1,27 +1,30 @@
 $( document ).ready(function() {
+    $("#languageList").hide();
+    $("#frameworkList").hide();
+    $("#operatingList").hide();
+    $("#otherList").hide();
     
-    $("#burgerIcon").click(function(e){
-    alert("hi there you clicked the menu");
-
-    e.preventDefault();
-    $("#myDropdown").toggleclass("show");
+    
+    $(".languages").click(function(e){
+       e.preventDefault();
+       $("#languageList").slideToggle();
     });
 
+    $(".frameworks").click(function(e){
+       e.preventDefault();
+       $("#frameworkList").slideToggle();
+    });
+    
+    $(".operating").click(function(e){
+       e.preventDefault();
+       $("#operatingList").slideToggle();
+    });
+    
+    $(".other").click(function(e){
+       e.preventDefault();
+       $("#otherList").slideToggle();
+    });
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
     $("#downloadPDF").click(function(e){
                             e.preventDefault();
                             alert("not today, sorrrryyyyy!");
