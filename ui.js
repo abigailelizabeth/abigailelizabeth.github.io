@@ -1,10 +1,13 @@
 $( document ).ready(function() {
-    alert("no");
+    alert("noooo");
     
-    function myFunction() {
-     alert("hello");
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+    $("#burgerIcon").click(function(e){
+    alert("hi there you clicked the menu");
+
+    e.preventDefault();
+    $("#myDropdown").toggleclass("show");
+    });
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -20,7 +23,9 @@ window.onclick = function(event) {
     }
   }
 }
-$("#downloadPDF").click(function{
-                        alert("not today, sorry!");
-                        });
+    $("#downloadPDF").click(function(e){
+                            e.preventDefault();
+                            alert("not today, sorrrryyyyy!");
+                            });
 });
+
