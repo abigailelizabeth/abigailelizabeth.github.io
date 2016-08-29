@@ -53,6 +53,7 @@
         .jobTitle{
             font-size: 1.3em;
         }
+
         .date{
             float: right;
             color: dodgerblue;
@@ -223,8 +224,17 @@
             background: #111;
         }
         @media only screen and (max-width: 768px){
+
             .jobTechnologies{
                 display: none;
+            }
+            .jobDivider{
+                border-top: 1px solid #eee;
+            }
+            .jobDesc{
+                white-space: nowrap;
+                overflow:hidden !important;
+                text-overflow: ellipsis;
             }
            h1{
             font-size: 1em;

@@ -4,10 +4,25 @@ $( document ).ready(function() {
     $("#frameworkList").hide();
     $("#operatingList").hide();
     $("#otherList").hide();
+    $(".descHider").hide();
     
-    // determine if mobile or not to hide certain divs
-
-
+    
+   if (window.matchMedia('(max-width: 767px)').matches) {
+        $(".jobContainer").click(function(){
+//            whitespace and overflow
+            
+            $(".jobDesc").css("white-space", "nowrap");
+            $(".descHider").hide();
+            $(".jobTechnologies").hide();
+            
+           $(this).children("ul").children(".jobDesc").css("white-space", "normal"); 
+            $(this).children("ul").children(".jobTechnologies").css("display", "inline");
+            $(this).children("ul").children(".descHider").show();
+            
+            
+             
+        });
+    }
     
     
     $(".languages").click(function(e){
