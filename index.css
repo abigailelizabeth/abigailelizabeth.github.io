@@ -245,7 +245,27 @@
             h3{
                 font-size: .17em;
             }  
-        }
+            .jobContainer{
+                position: relative;
+                overflow: hidden;
+            }
+            .jobContainer:after{
+                content: "";
+                background: lightgray;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -20px!important;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 0.8s
+            }
+            .jobContainer:active:after {
+                padding: 0;
+                opacity: 1;
+                transition: 0s
+            }
        
         
 /*        here is where i add for larger screens*/
