@@ -1,8 +1,17 @@
 $( document ).ready(function() {
-    $("#languageList").hide();
-    $("#frameworkList").hide();
-    $("#operatingList").hide();
-    $("#otherList").hide();
+       if (window.matchMedia('(min-width: 767px)').matches) {
+            $("#languageList").show();
+            $("#frameworkList").show();
+            $("#operatingList").show();
+            $("#otherList").show();
+    
+    } else {
+            $("#languageList").hide();
+            $("#frameworkList").hide();
+            $("#operatingList").hide();
+            $("#otherList").hide();
+    }
+
     
     
     $(".languages").click(function(e){
