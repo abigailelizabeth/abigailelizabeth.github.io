@@ -47,9 +47,9 @@
             padding-top: 1%;
 
         }
-.listedSkills{
-    margin: auto;
-}
+        .listedSkills{
+            text-align: center;
+        }
 
         .btn p{
          font-size: 120%;    
@@ -66,6 +66,7 @@
     border-color: #BDC3C7;
     background-color: #BDC3C7;
     font-size: 14px;
+    margin-bottom: 2px; margin-top: 2px;
     
 }
         .skill{
