@@ -53,5 +53,9 @@ $( document ).ready(function() {
                             e.preventDefault();
                             alert("not today, sorrrryyyyy!");
                             });
+//    "go to the next page"
+    $(".projectTile").click(function(){
+        $("#homePage").hide();
+    });
 });
 
