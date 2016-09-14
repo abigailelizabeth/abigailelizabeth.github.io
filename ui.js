@@ -5,6 +5,7 @@ $( document ).ready(function() {
     $("#operatingList").hide();
     $("#otherList").hide();
     $(".descHider").hide();
+    $("#projectPage").hide();
     
     
    if (window.matchMedia('(max-width: 767px)').matches) {
@@ -56,6 +57,14 @@ $( document ).ready(function() {
 //    "go to the next page"
     $(".projectTile").click(function(){
         $("#homePage").hide();
+        $("#projectPage").show();
     });
+    
+    
+    $("#returnHomeBtn").click(function(e){
+       e.preventDefault();
+        $("#homePage").show();
+        $("#projectPage").hide();
+    })
 });
 
