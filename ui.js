@@ -56,8 +56,9 @@ $( document ).ready(function() {
                             });
 //    "go to the next page"
     $(".projectTile").click(function(){
-        $("#homePage").hide();
-        $("#projectPage").show();
+        alert("Under construction, try again later");
+//        $("#homePage").hide();
+//        $("#projectPage").show();
     });
     
     
