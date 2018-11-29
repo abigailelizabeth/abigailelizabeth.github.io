@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Home from './containers/index';
 
 class App extends Component {
-  
   render() {
     return (
       <div className="App">
-      <div className="topBar"></div>
-      <b style={{position: 'fixed', top: 10, left: 40,zIndex: 11}}>Gobby</b>
-      <div style={{position: 'fixed', top: 350,left: 10, zIndex:11, transform: 'rotate(-90deg)'}}><b>menu</b> <b style={{position: "absolute", right:350, bottom: 0}}>scroll<i><i><i>^</i></i></i></b></div>
-        <div className="sideNav"></div>
-        <div className="sideNavRight"></div>
-        <div className="endBar"></div>
-        <Home/>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
       </div>
-// 2ab7ca
     );
   }
 }
+
 export default App;
