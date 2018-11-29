@@ -1,14 +1,14 @@
 {
-  "main.css": "/abigailelizabeth.github.io/static/css/main.983b0b22.chunk.css",
-  "main.js": "/abigailelizabeth.github.io/static/js/main.a842632f.chunk.js",
-  "main.js.map": "/abigailelizabeth.github.io/static/js/main.a842632f.chunk.js.map",
-  "static/js/1.2dd891c4.chunk.js": "/abigailelizabeth.github.io/static/js/1.2dd891c4.chunk.js",
-  "static/js/1.2dd891c4.chunk.js.map": "/abigailelizabeth.github.io/static/js/1.2dd891c4.chunk.js.map",
-  "runtime~main.js": "/abigailelizabeth.github.io/static/js/runtime~main.ec8d0e33.js",
-  "runtime~main.js.map": "/abigailelizabeth.github.io/static/js/runtime~main.ec8d0e33.js.map",
-  "static/media/logo.svg": "/abigailelizabeth.github.io/static/media/logo.5d5d9eef.svg",
-  "static/css/main.983b0b22.chunk.css.map": "/abigailelizabeth.github.io/static/css/main.983b0b22.chunk.css.map",
-  "index.html": "/abigailelizabeth.github.io/index.html",
-  "precache-manifest.564615b385ed6f50a7e158eca8c1f58f.js": "/abigailelizabeth.github.io/precache-manifest.564615b385ed6f50a7e158eca8c1f58f.js",
-  "service-worker.js": "/abigailelizabeth.github.io/service-worker.js"
+  "main.css": "/static/css/main.983b0b22.chunk.css",
+  "main.js": "/static/js/main.2523c625.chunk.js",
+  "main.js.map": "/static/js/main.2523c625.chunk.js.map",
+  "static/js/1.2dd891c4.chunk.js": "/static/js/1.2dd891c4.chunk.js",
+  "static/js/1.2dd891c4.chunk.js.map": "/static/js/1.2dd891c4.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
+  "static/css/main.983b0b22.chunk.css.map": "/static/css/main.983b0b22.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.512a34c24d37826beee3dc4584e645a7.js": "/precache-manifest.512a34c24d37826beee3dc4584e645a7.js",
+  "service-worker.js": "/service-worker.js"
 }
