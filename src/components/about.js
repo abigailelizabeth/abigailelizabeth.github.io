@@ -8,19 +8,17 @@ import {Container, Hello, PinkBlock, Content, ImageWrapper, BioWrapper, BioSecti
    
         return(
             
-            <Container showMenu={props.showMenu} here={props.here}>
+            <Container showMenu={props.showMenu} here={props.here} currentView={props.current} >
                 <Hello>Hello</Hello>
                 {console.log(props.here)}
                 <h3 style={{ transition: 'opacity', transitionDuration: '4000ms', opacity: `${props.hello? 1 : 0}`, position: 'fixed', left: '25%', top: '40%',  paddingLeft: 60, fontSize: 'calc(1em + 1vw)', fontFamily: 'Karla, sans-serif', fontWeight: 'bold', color: '#f4f4f8', marginBlockEnd: 0}}>(again)</h3>
                 
                 <PinkBlock />
-                <Content>
-                    <ImageWrapper>
-                        <img src={require('../static/images/abby.jpg')}/>
-                    </ImageWrapper>
+                <Content >
+                    <ImageWrapper src={require('../static/images/abby.jpg')}/>
                     <BioWrapper>
                         <BioSection>
-                            {data.about.intro}
+                            {data.about.intro} <br/>
                             {data.about.currently}
                         </BioSection>
                         <List >

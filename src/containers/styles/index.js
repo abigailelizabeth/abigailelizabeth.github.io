@@ -11,6 +11,18 @@ const menuEntice = keyframes`
     top: -50vh;
   }
 `
+const navGlow = keyframes`
+0%{
+    opacity: .3;
+}
+50%{
+    opacity: 1;
+}
+100%{
+    opacity: .3;
+}
+
+`;
 const arrowEntice = keyframes`
   0% {
     top: 0vh;
@@ -88,6 +100,32 @@ export const MenuWrapper = styled.div`
     
 `;
 
+export const NavNext = styled.div`
+    transform: rotate(90deg);
+    z-index: 5;
+    color: white;
+    top: 40vh;
+    position: fixed;
+    opacity: .7;
+    animation: ${navGlow} 3s ease-in-out 0s infinite;   
+    right: 6vw;
+    font-size: calc(2em + 12vw);
+    font-weight: bold;
+    @media only screen and (min-width: 768px) {
+        &:hover{
+            cursor: pointer;
+        }
+     }
+    
+`;
+export const NavPrev = styled.div`
+    z-index: 5;
+    colore: white;
+    position:fixed;
+    font-size: calc(2.5em + 12vw);
+    font-weight: bold;
+
+`;
 export const Menu = styled.div`
     color: white;
     height: 60vh;

@@ -3,7 +3,7 @@ import About from '../components/about';
 import Experience from '../components/experience';
 import Projects from '../components/projects';
 import Skills from '../components/skills'
-import {Container, MenuWrapper, Menu, MenuBall, MenuItem, Arrow} from './styles/index';
+import {Container, MenuWrapper, Menu, MenuBall, MenuItem, Arrow, NavNext, NavPrev} from './styles/index';
 class Home extends Component {
     
     state = {
@@ -85,6 +85,8 @@ class Home extends Component {
                         <MenuItem onClick={() => this.handleShowView(2)} >Projects</MenuItem>
                     </Menu>
                 </MenuWrapper>
+                {this.state.currentView!==2&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>^</NavNext>}
+                {this.state.currentView!==0&&<NavPrev onClick={()=> this.handleShowView(this.state.currentView - 1)}>^</NavPrev>}
 
                 {this.state.currentView=== 0&&<About showMenu={this.state.showMenu} here={this.state.youHereAlready} animateIntro={this.state.animateIntro}hello={this.state.helloAgain}/>}
                 {this.state.currentView === 1&&<Experience showMenu={this.state.showMenu} here={this.state.youHereAlready}viewJob={this.state.viewJob} handleViewJob={this.handleViewJob} viewJobEffort={this.state.viewJobEffort}

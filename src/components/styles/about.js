@@ -11,6 +11,16 @@ const helloFlow = keyframes`
    top: 0vh;
 }
 `;
+const helloFlowSm = keyframes`
+0% {
+   right: 30vw;
+   top: 50vh;
+}
+100% {
+   right: 45vw;
+   top: 0vh;
+}
+`;
 const techScroll = keyframes`
 0%{
    left: -50vw;
@@ -44,23 +54,39 @@ export const Container = styled.div`
    position: relative;
    background-color: #2ab7ca;
    height: 100vh;
+   width: 100vw;
    transition-timing-function: ease-in-out;
    transition-duration: ${props => props.here? ".2s" : "1s"};
-   transform: ${props => props.showMenu&&!props.here? "translate(10vw)" : props.showMenu&&props.here? "translate(10vw, 3vh)":  "translate(0vw)"};
+   transform: ${props => props.showMenu&&!props.here? "translate(10vw)" : props.showMenu&&props.here? "translate(10vw, 3vh)": "translate(0vw)"};
    > * {
       font-family: Karla, sans-serif;
-      color: #f8f4f8;
-      font-size: calc(.3em + 1vw);
+      color: white;
+      font-size: calc(.3em + 3vw);
+   }
+   @media only screen and (min-width: 768px) {
+      > * {
+         font-family: Karla, sans-serif;
+         color: #f8f4f8;
+         font-size: calc(.3em + 1vw);
    }
 `;
  export const Hello = styled.h1`
     z-index: 1;
     position: absolute;
     top: 0vh;
-    right: 15vw;
-    font-size: calc(1em + 10vw);
+    right: 45vw;
+    margin-top: 0vh;
+    font-size: calc(2.5em + 12vw);
     font-weight: bold;
-    animation: ${helloFlow} 2s ease-in-out 0s 1; 
+    animation: ${helloFlowSm} 2s ease-in-out 0s 1; 
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 5vh;
+      font-size: calc(1em + 10vw);
+      animation: ${helloFlow} 2s ease-in-out 0s 1; 
+      top: 0vh;
+      right: 15vw;
+   }
  `;
 
  export const PinkBlock = styled.div`
@@ -79,40 +105,54 @@ export const Container = styled.div`
    position: absolute;
    width: 100vw;
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
-   margin-inline-block-end: 5vw;
-   margin-inline-block-start: 5vw;
-   top: 25vh;
+   flex-direction: column;
+   top: 15vh;
    text-align: left;
    animation: ${contentFlow} 2s ease-in-out 0s 1;
    color: white;
+   @media only screen and (min-width: 768px) {
+      top: 25vh;
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
  `;
 
- export const ImageWrapper = styled.div`
-   width: 45%;
+ export const ImageWrapper = styled.img`
+   width: 35vw;
+   height: auto;
+   border-radius: 20%;
    order: 1;
-   > img {
-      border-radius: 100px;
-      width: 60%;
-      height: auto;
+   src: ${props => props.src};
+   @media only screen and (min-width: 768px) {
+      width: 25vw;
    }
  `;
  export const BioWrapper = styled.div`
    border-top: 1px solid white;
    padding: 2vw 2vh 2vh 2vw;
+   margin-top: 2vh;
    display: flex;
    flex-direction: column;
    align-items: center;
    order: 2;
-   width: 45%;
+   width: 70vw;
+   @media only screen and (min-width: 768px) {
+      width: 45vw;
+      margin-top: 0vh;
+   }
  `;
  export const BioSection = styled.div`
    padding: 1.5vh;
  `;
 export const TechSection = styled.div`
-   width: 25vw;
+   width: 60vw;
    overflow: hidden;
+
+   @media only screen and (min-width: 768px) {
+      width: 25vw;
+   }
    
    
 `;

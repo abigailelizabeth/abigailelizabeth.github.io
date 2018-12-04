@@ -6,7 +6,7 @@ import {Container, Content, Title, JobContainer, JobSide, Jobs, JobDescip, Job, 
 
       const {viewJob, viewJobEffort} = props
         return(
-            <Container showMenu={props.showMenu} here={props.here}>
+            <Container showMenu={props.showMenu} here={props.here} current={props.current}>
             <Title>{'< Work />'}</Title>
                 <Content>
                 <JobContainer>   
