@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   background-color: #2ab7ca;
-  z-index: 8;
   position: relative;
   overflow: hidden;
 }
