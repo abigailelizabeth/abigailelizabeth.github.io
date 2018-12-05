@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import About from '../components/about';
 import Experience from '../components/experience';
 import Projects from '../components/projects';
-import {Container, MenuWrapper, Menu, MenuBall, MenuItem, Arrow, NavNext, NavPrev} from './styles/index';
+import {Container,MenuColor, MenuWrapper,MenuSm, Menu, MenuBall, MenuItem, Arrow, NavNext, NavPrev} from './styles/index';
 class Home extends Component {
     
     state = {
@@ -14,7 +14,7 @@ class Home extends Component {
         lastScroll: 0,
         view: 0,
         showMenu: false,
-        currentView: 2,
+        currentView: 0,
         youHereAlready: false
     }
     handleCancelViewJob = () => {
@@ -23,34 +23,18 @@ class Home extends Component {
     updateComponent = () => {
         this.setState({animate: true})
     }
-    top = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'})
-        setTimeout(()=>{this.setState({helloAgain: true}); setTimeout(()=> this.setState({helloAgain: false}), 2000)}, 2000)
-
-    }
+    
     handleShowMenu = (set) => {
+        
         if(set !== undefined)
             this.setState({showMenu: set})
         else
             this.setState(state => ({showMenu: !state.showMenu}))
+    
+    
     }
-    handleScroll = (event) => {
-
-        if(window.pageYOffset > this.state.lastScroll){
-            console.log('howdy')
-            window.scrollTo({top: '100vh'})
-            let view = this.state.view + 1
-            this.setState({view: view % 4})
-        }
-        if(window.pageYOffset < this.state.lastScroll){
-            let view = this.state.view - 1
-            if(view < 0) view = view + 4
-            this.setState({view: view% 4})
-        }
-        console.log(this.state.view, this.state.lastScroll)
-        this.setState({lastScroll: window.pageYOffset})
-
-    }
+    
+    
     handleShowView = (view) => {
 
         if(view === this.state.currentView){
@@ -58,14 +42,12 @@ class Home extends Component {
             setTimeout(() => this.setState({youHereAlready: false, showMenu: false}), 100)
         }
         else {
-            this.setState({currentView: view, showMenu: false})
+            this.setState({currentView: view, showMenu: false, viewJob: null})
         }
     }
 
   
-    componentWillUnmount(){
-        clearInterval(this.state.intervalID)
-    }
+   
     toggleTechnicalView = () => {
         this.setState(state => ({technical: !state.technical, viewJob: 0, viewJobEffort: 0}))
     }
@@ -78,6 +60,7 @@ class Home extends Component {
     render(){
         return (
             <Container>
+                <MenuSm onClick={() => this.handleShowMenu()}><MenuColor/>=</MenuSm>
                 <MenuWrapper onMouseEnter={() => this.handleShowMenu(true)} onMouseLeave={() =>this.handleShowMenu(false)}>
                     <Menu show={this.state.showMenu} >
                         
@@ -87,8 +70,8 @@ class Home extends Component {
                         <MenuItem onClick={() => this.handleShowView(2)} >Projects</MenuItem>
                     </Menu>
                 </MenuWrapper>
-                {this.state.currentView!==2&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>></NavNext>}
-                {this.state.currentView!==0&&<NavPrev onClick={()=> this.handleShowView(this.state.currentView - 1)}>{'<'}</NavPrev>}
+                {this.state.currentView!==2&&!this.state.showMenu&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>></NavNext>}
+                {this.state.currentView!==0&&!this.state.showMenu&&<NavPrev onClick={()=> this.handleShowView(this.state.currentView - 1)}>{'<'}</NavPrev>}
 
                 {this.state.currentView=== 0&&<About showMenu={this.state.showMenu} here={this.state.youHereAlready} animateIntro={this.state.animateIntro}hello={this.state.helloAgain}/>}
                 {this.state.currentView === 1&&<Experience showMenu={this.state.showMenu} here={this.state.youHereAlready}viewJob={this.state.viewJob} handleViewJob={this.handleViewJob} viewJobEffort={this.state.viewJobEffort}
@@ -97,12 +80,6 @@ class Home extends Component {
                 {/*<Skills top={this.top} more={this.state.more}/>     */}
             </Container>
                 
-                   
-               
-               
-
-
-               
         );   
     }
 }

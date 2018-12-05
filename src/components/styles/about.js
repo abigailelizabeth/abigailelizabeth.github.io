@@ -57,13 +57,15 @@ export const Container = styled.div`
    width: 100vw;
    transition-timing-function: ease-in-out;
    transition-duration: ${props => props.here? ".2s" : "1s"};
-   transform: ${props => props.showMenu&&!props.here? "translate(10vw)" : props.showMenu&&props.here? "translate(10vw, 3vh)": "translate(0vw)"};
+   transform: ${props => props.showMenu&&!props.here? "translate(-30vw)" : props.showMenu&&props.here? "translate(-30vw, 3vh)": "translate(0vw)"};
    > * {
       font-family: Karla, sans-serif;
       color: white;
       font-size: calc(.3em + 3vw);
    }
    @media only screen and (min-width: 768px) {
+      transition-duration: ${props => props.here? ".2s" : "1s"};
+      transform: ${props => props.showMenu&&!props.here? "translate(10vw)" : props.showMenu&&props.here? "translate(10vw, 3vh)": "translate(0vw)"};
       > * {
          font-family: Karla, sans-serif;
          color: #f8f4f8;

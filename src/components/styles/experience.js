@@ -16,7 +16,26 @@ const experienceEntranceTitle = keyframes`
       right: 40vw;
    }
 `;
-
+const descriptionEntrance = keyframes`
+   0% {
+      top: -30vh;
+      left: -100vw;
+   }
+   100% {
+      top: -30vh;
+      left: 0;
+   }
+`;
+const descriptionEntranceLg = keyframes`
+   0% {
+      top: 0vh;
+      left: -100vw;
+   }
+   100% {
+      top: 0;
+      left: 0;
+   }
+`;
 
 export const Container = styled.div`
    position: relative;
@@ -24,7 +43,7 @@ export const Container = styled.div`
    background: transparent;
    transition-timing-function: ease-in-out;
    transition-duration: ${props => props.here? ".2s" : "1s"};
-   transform: ${props => props.showMenu&&!props.here? "translate(15vw)" : props.showMenu&&props.here? "translate(15vw, 3vh)":  "translate(0vw)"};
+   transform: ${props => props.showMenu&&!props.here? "translate(-15vw)" : props.showMenu&&props.here? "translate(-15vw, 3vh)":  "translate(0vw)"};
 
    > * {
       font-family: Karla, sans-serif;
@@ -33,6 +52,8 @@ export const Container = styled.div`
    }
 
    @media only screen and (min-width: 768px) {
+      transition-duration: ${props => props.here? ".2s" : "1s"};
+      transform: ${props => props.showMenu&&!props.here? "translate(15vw)" : props.showMenu&&props.here? "translate(15vw, 3vh)":  "translate(0vw)"};
       > * {
          font-family: Karla, sans-serif;
          color: #f8f4f8;
@@ -94,16 +115,18 @@ export const JobContainer = styled.div`
 
 `;
 export const Jobs = styled.div`
+
    color: white;
    position: absolute;
+   background-color: #2ab7ca;
    top: -30vh;
    width: 80vw;
    padding: 2px;
    left:0;
    right: 0;
-   transform: ${props => props.viewJob? "translate(100vw,40vh)" : ""};
+   transform: ${props => props.viewJob? "translate(80vw,0vh)" : ""};
    transition-timing-function: linear;
-   transition-duration: .2s;
+   transition-duration: 1s;
 
 
    @media only screen and (min-width: 768px) {
@@ -148,8 +171,10 @@ export const JobDescip = styled.div`
    border-radius: 2%;
    left: 0;
    right: 0;
-
    color: white;
+   animation: ${descriptionEntrance} 1s ease-in-out 0s 1;
+   
+
    @media only screen and (min-width: 768px) {
       order: 1;
       padding: none;
@@ -160,15 +185,17 @@ export const JobDescip = styled.div`
       text-align: left;
       border: none;
       font-size: calc(.3em + 1vw);
+      animation: ${descriptionEntranceLg} 1s ease-in-out 0s 1;
 
    }
 `;
 export const Job = styled.div`
-   box-shadow: 1px 2px 2px 4px rgba(128, 128, 128, .2);
-   margin: 10px;
-   height: 8vh;
+   margin: 8px;
+   height: 10vh;
    border: 1px solid white;
-   border-radius: 2%;
+   background-color: rgb(244,244,248, .2);
+
+   border-radius: 3px;
    padding: 5px;
 @media only screen and (min-width: 768px) {
    &:hover {
@@ -178,6 +205,7 @@ export const Job = styled.div`
    ${props => props.selected? "transform: translate(-30vw,-8vh);color: white;border-left:2px solid #2ab7ca; border-bottom:2px solid #2ab7ca; " : ""};
    width: auto;
    box-shadow: none;
+   background-color: transparent;
    border: none;
    margin: none;
    height: auto;
@@ -192,8 +220,10 @@ export const JobTitle = styled.div`
 
 `;
 export const JobYear = styled.div`
-   font-size: calc(.2em + .8vw);
-   margin: .5vh 0vw 0vw .5vh;
+   @media only screen and (min-width: 768px) {
+      font-size: calc(.2em + .8vw);
+      margin: .5vh 0vw 0vw .5vh;
+   }
 `;
 export const Company = styled.div`
    font-weight: bold;

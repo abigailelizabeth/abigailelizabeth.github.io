@@ -22,7 +22,7 @@ export const Container = styled.div`
     background: transparent;
     transition-timing-function: ease-in-out;
     transition-duration: ${props => props.here? ".2s" : "1s"};
-    transform: ${props => props.showMenu&&!props.here? "translate(15vw)" : props.showMenu&&props.here? "translate(15vw, 3vh)":  "translate(0vw)"};
+    transform: ${props => props.showMenu&&!props.here? "translate(-30vw)" : props.showMenu&&props.here? "translate(-30vw, 3vh)":  "translate(0vw)"};
 
     > * {
     font-family: Karla, sans-serif;
@@ -30,6 +30,8 @@ export const Container = styled.div`
     font-size: calc(.3em + 1vw);
     }
     @media only screen and (min-width: 768px) {
+        transition-duration: ${props => props.here? ".2s" : "1s"};
+        transform: ${props => props.showMenu&&!props.here? "translate(15vw)" : props.showMenu&&props.here? "translate(15vw, 3vh)":  "translate(0vw)"};
     }
 `;
 export const Content = styled.div`
