@@ -13,19 +13,20 @@ import {Container, Content, Title, DescriptionWrapper, ProjectContainer, Project
                   <ProjectContainer>
                       <ProjectWrapper>
                           <ProjectPreview>
-                          <img style={{width: '100%', height: 'auto'}} src={require('../static/images/kerv.gif')}/>
+                          <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kerv.gif')}/>
                           <ProjectTitle>Kerv</ProjectTitle>
                           </ProjectPreview>
                         </ProjectWrapper>
                         <ProjectWrapper>
                           <ProjectPreview>
-                          <img style={{width: '100%', height: 'auto'}} src={require('../static/images/kervkue.gif')}/>
+                          <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kervkue.gif')}/>
                           <ProjectTitle>KervKue</ProjectTitle>
                           </ProjectPreview>
                         </ProjectWrapper>   
                     <ProjectWrapper>   
                       <ProjectPreview>             
-                          data data data data lll
+                      <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kerv.gif')}/>
+
                           <ProjectTitle>Another</ProjectTitle>
                         </ProjectPreview>
                       </ProjectWrapper>                    

@@ -1,7 +1,6 @@
 import React from 'react';
-import {  List, Divider } from '@material-ui/core';
+import {  List} from '@material-ui/core';
 import * as data from '../data/about';
-import styled from 'styled-components';
 
 import {Container, Hello, PinkBlock, Content, ImageWrapper, BioWrapper, BioSection, TechSection, TechItem, TechWrapper} from './styles/about';
   const About = props => {

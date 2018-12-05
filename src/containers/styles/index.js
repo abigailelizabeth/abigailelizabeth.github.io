@@ -107,8 +107,8 @@ export const NavNext = styled.div`
     position: fixed;
     opacity: .7;
     animation: ${navGlow} 3s ease-in-out 0s infinite;   
-    right: 6vw;
-    font-size: calc(2em + 12vw);
+    right: 0vw;
+    font-size: calc(2em + 10vw);
     font-weight: bold;
     @media only screen and (min-width: 768px) {
         &:hover{
@@ -129,7 +129,7 @@ export const NavPrev = styled.div`
     position: fixed;
     opacity: .7;
     animation: ${navGlow} 3s ease-in-out 0s infinite;   
-    font-size: calc(2em + 12vw);
+    font-size: calc(2em + 10vw);
     font-weight: bold;
     @media only screen and (min-width: 768px) {
         &:hover{

@@ -28,18 +28,26 @@ export const Container = styled.div`
     font-family: Karla, sans-serif;
     color: black;
     font-size: calc(.3em + 1vw);
-    }  
+    }
+    @media only screen and (min-width: 768px) {
+    }
 `;
 export const Content = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     position: absolute;
-    right: 0;
     height: 100vh;
+    justify-content: center;
     width: 90vw;
+    height: 100vh;
+    right: 0;
     animation: ${projectsEntrance} 2s ease-in-out 0s 1;
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 `;
 
 export const Title = styled.h1`
@@ -47,75 +55,102 @@ export const Title = styled.h1`
    right: 40vw;
    display: block;
    width: 50vw;
-   border-bottom: 2px solid #2ab7ca;
    text-align: left;
    color: white;
-   font-size: calc(.5em + 5vw);
+   font-size: calc(2em + 5vw);
    font-weight: bold;
    animation: ${projectEntranceTitle} 2s ease-in-out 0s 1;
+   @media only screen and (min-width: 768px) {
+        position: absolute;
+        right: 40vw;
+        display: block;
+        width: 50vw;
+        text-align: left;
+        color: white;
+        font-size: calc(.5em + 5vw);
+        font-weight: bold;
+   }
 
 `;
 export const ProjectDesc = styled.div`
-    background-color: pink;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 50vw;
+    display: none;
+    @media only screen and (min-width: 768px) {
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 50vw;
+    }
 `;
 export const ProjectContainer = styled.div`
+    top: 5vh;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35vw;
-    overflow: auto;
-    height: 60vh;
+    width: 80vw;
+    overflow-y: auto;
+    height: 70vh;
+    justify-content: space-between;
     background-color: rgb(230,230,234, .5);
+
+    @media only screen and (min-width: 768px) {
+        justify-content: space-evenly;
+        width: 35vw;
+        background-color: rgb(230,230,234, .5);
+    }
 
 `;
 
 export const ProjectWrapper = styled.div`
-    box-shadow: 1px 2px 2px 4px rgba(170, 170, 170, .2);
-    width: 30vw;
-    height: 20vw;
-    background-color: white;
-    margin: 2vh 2vw 2vh 2vw;
-    border-radius: 5px;
-    &:hover {
-        cursor: pointer;
-        transform: perspective(150px) translateZ(10px); 
-    }
-    transition: transform;
-    transition-duration: .2s;
+        width: 80vw;
+        height: 30vh;
+        background-color: white;
+        margin: 5vh 0vw 5vh 0vw;
+        border-radius: 5px;
+        &:hover {
+            cursor: pointer;
+            transform: perspective(150px) translateZ(10px); 
+        }
+        transition: transform;
+        transition-duration: .2s;
+        transition-timing-function: ease-in-out; 
 
-    transition-timing-function: ease-in-out;
-    
+    @media only screen and (min-width: 768px) {
+        box-shadow: 1px 2px 2px 4px rgba(170, 170, 170, .2);
+        position: relative;
+        width: 30vw;
+        height: 30vh;
+        top: 25vh;
+        background-color: white;
+        margin: 8vh 2vw 4vh 2vw;
+        border-radius: 5px; 
+    }  
 `;
 export const ProjectPreview = styled.div`
-    position: relative;
     height: 100%;
     width: 100%;
-    text-align: left;
+    position: relative;
     border-radius: 5px;
-   
-
-
 `;
 export const ProjectTitle = styled.div`
-    position: absolute;
-    font-weight: bold;
-    bottom: 0;
-    margin-block-end: 0;
-    height: 8vh;
-    width: 100%;
-    background-color: rgb(230,230,234, .9);
-    color: white;
-    display: flex;
-    align-items: center;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    display: none;
+    @media only screen and (min-width: 768px) {
+        position: absolute;
+        font-weight: bold;
+        bottom: 0;
+        margin-block-end: 0;
+        height: 8vh;
+        width: 100%;
+        background-color: rgb(230,230,234, .9);
+        color: white;
+        display: flex;
+        align-items: center;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 
 
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as data from '../data/work';
-import {Container, Content, Title, Back,JobContainer, JobSide, Jobs, JobDescip, Job, JobTitle, JobYear, Summary, Intro, Company, Efforts, Effort, EffortSummary, EffortSkills, Skill} from './styles/experience';
+import {Container, Content, Title, Back,JobContainer, Jobs, JobDescip, Job, JobTitle, JobYear, Summary, Intro, Company, Efforts, Effort, EffortSummary, EffortSkills, Skill} from './styles/experience';
  
   const Experience = props => {
 

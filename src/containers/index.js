@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import About from '../components/about';
 import Experience from '../components/experience';
 import Projects from '../components/projects';
-import Skills from '../components/skills'
 import {Container, MenuWrapper, Menu, MenuBall, MenuItem, Arrow, NavNext, NavPrev} from './styles/index';
 class Home extends Component {
     
@@ -15,7 +14,7 @@ class Home extends Component {
         lastScroll: 0,
         view: 0,
         showMenu: false,
-        currentView: 0,
+        currentView: 2,
         youHereAlready: false
     }
     handleCancelViewJob = () => {

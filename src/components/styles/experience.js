@@ -16,14 +16,7 @@ const experienceEntranceTitle = keyframes`
       right: 40vw;
    }
 `;
-const showJobDescription = keyframes` 
-   0% {
-      height: 0vh;
-   }
-   100% {
-      height: 90vh;
-   }
-`;
+
 
 export const Container = styled.div`
    position: relative;
@@ -110,7 +103,7 @@ export const Jobs = styled.div`
    right: 0;
    transform: ${props => props.viewJob? "translate(100vw,40vh)" : ""};
    transition-timing-function: linear;
-   transition-duration: 1s;
+   transition-duration: .2s;
 
 
    @media only screen and (min-width: 768px) {
