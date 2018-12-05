@@ -101,7 +101,6 @@ export const MenuWrapper = styled.div`
 `;
 
 export const NavNext = styled.div`
-    transform: rotate(90deg);
     z-index: 5;
     color: white;
     top: 40vh;
@@ -115,15 +114,32 @@ export const NavNext = styled.div`
         &:hover{
             cursor: pointer;
         }
+        font-size: calc(2em + 1vw);
+        font-weight: bold;
+        top: 90vh;
+        left: 30vw;
      }
     
 `;
 export const NavPrev = styled.div`
     z-index: 5;
-    colore: white;
-    position:fixed;
-    font-size: calc(2.5em + 12vw);
+    color: white;
+    top: 40vh;
+    left: 0;
+    position: fixed;
+    opacity: .7;
+    animation: ${navGlow} 3s ease-in-out 0s infinite;   
+    font-size: calc(2em + 12vw);
     font-weight: bold;
+    @media only screen and (min-width: 768px) {
+        &:hover{
+            cursor: pointer;
+        }
+        top: 90vh;
+        left: 30vw;
+        font-size: calc(2em + 1vw);
+        font-weight: bold;
+    }
 
 `;
 export const Menu = styled.div`

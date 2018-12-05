@@ -36,7 +36,14 @@ export const Container = styled.div`
    > * {
       font-family: Karla, sans-serif;
       color: black;
-      font-size: calc(.3em + 1vw);
+      font-size: calc(.3em + 3vw);
+   }
+
+   @media only screen and (min-width: 768px) {
+      > * {
+         font-family: Karla, sans-serif;
+         color: #f8f4f8;
+         font-size: calc(.3em + 1vw);
    }
 
 `;
@@ -53,57 +60,139 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
-   position: absolute;
-   right: 40vw;
-   display: block;
-   width: 50vw;
-   border-bottom: 2px solid #2ab7ca;
-   text-align: left;
-   color: white;
-   font-size: calc(.5em + 5vw);
+   font-size: calc(2em + 5vw);
    font-weight: bold;
+
+   color: white;
+   position: absolute;
+   display: block;
+   width: 65vw;
+   right: 40vw;
+
    animation: ${experienceEntranceTitle} 2s ease-in-out 0s 1;
 
+   @media only screen and (min-width: 768px) {
+      text-align: left;
+      right: 40vw;
+
+      width: 50vw;
+
+      border-bottom: 2px solid #2ab7ca;
+      
+      font-size: calc(.5em + 5vw);
+   }
 `;
 export const JobContainer = styled.div`
    padding: 5vh 0vw 0vw 4vh;
    position: relative;
-   min-height: 70vh;
-   justify-content: flex-center;
-   display: flex;
+   
    width: 80vw;
-   flex-direction: row;
    text-align: left;
+   @media only screen and (min-width: 768px) {
+      justify-content: center;
+      display: flex;
+      padding: 5vh 0vw 0vw 4vh;
+      position: relative;
+      min-height: 70vh;
+      justify-content: flex-center;
+      display: flex;
+      flex-direction: row;
+   }
 
 `;
 export const Jobs = styled.div`
-order: 2;
-position: relative;
-background-color: rgb(244,244,248, .3);
-   width: 30vw;
-   display: flex;
-   flex-direction: column;
-   margin-left: 10vw;
-   border-radius: 4px;
-`;
-
-export const JobDescip = styled.div`
-   order: 1;
-   margin: 2vh 5vw 0vh 1vw;
    color: white;
-   width: 50vw;
-   text-align: left;
+   position: absolute;
+   top: -30vh;
+   width: 80vw;
+   padding: 2px;
+   left:0;
+   right: 0;
+   transform: ${props => props.viewJob? "translate(100vw,40vh)" : ""};
+   transition-timing-function: linear;
+   transition-duration: 1s;
+
+
+   @media only screen and (min-width: 768px) {
+      order: 2;
+      position: relative;
+      top: 0;
+      background-color: rgb(244,244,248, .2);
+      width: 30vw;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10vw;
+      border-radius: 4px;
+      transform: none;
+   }
+`;
+export const Back = styled.button`
+   position: absolute;
+   border: 1px solid red;
+   width: 4vw;
+   height: 4vw;
+   padding: 2px;
+   padding-top: 0px;
+   border-radius: 50%;
+   background-color: red;
+   right: 2vw;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: calc(.2em + 1vw);
+   @media only screen and (min-width: 768px) {
+      display: none;
+   }
+`;
+export const JobDescip = styled.div`
+   position: absolute;
+   top: -30vh;
+   width: 70vw;
+   padding: 8px;
+   font-size: calc(1em + 3vw);
+   border: 2px solid white;
+   border-radius: 2%;
+   left: 0;
+   right: 0;
+
+   color: white;
+   @media only screen and (min-width: 768px) {
+      order: 1;
+      padding: none;
+      top: 0;
+      position: relative;
+      margin: 2vh 5vw 0vh 1vw;
+      width: 50vw;
+      text-align: left;
+      border: none;
+      font-size: calc(.3em + 1vw);
+
+   }
 `;
 export const Job = styled.div`
-    position: ${props => props.selected? "absolute" : ""}
-   ${props => props.selected? "transform: translate(-30vw,-8vh);color: white;border-left:2px solid #2ab7ca; border-bottom:2px solid #2ab7ca; " : ""};
-   width: auto;
-   padding: 1vh 0vw 1vh 1vw;
+   box-shadow: 1px 2px 2px 4px rgba(128, 128, 128, .2);
+   margin: 10px;
+   height: 8vh;
+   border: 1px solid white;
+   border-radius: 2%;
+   padding: 5px;
+@media only screen and (min-width: 768px) {
    &:hover {
       background-color: ${props => !props.selected? "#d5dada" : ""};
-    }
-    transition-duration: .5s;
-    transition-timing-function: ease-in-out;
+      }
+      position: ${props => props.selected? "absolute" : ""}
+   ${props => props.selected? "transform: translate(-30vw,-8vh);color: white;border-left:2px solid #2ab7ca; border-bottom:2px solid #2ab7ca; " : ""};
+   width: auto;
+   box-shadow: none;
+   border: none;
+   margin: none;
+   height: auto;
+   padding: 1vh 0vw 1vh 1vw;
+   color: white;
+   transition-duration: .5s;
+   transition-timing-function: ease-in-out;
+}
 `;
 
 export const JobTitle = styled.div`

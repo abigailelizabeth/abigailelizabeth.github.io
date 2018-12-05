@@ -1,16 +1,16 @@
 import React from 'react';
 import * as data from '../data/work';
-import {Container, Content, Title, JobContainer, JobSide, Jobs, JobDescip, Job, JobTitle, JobYear, Summary, Intro, Company, Efforts, Effort, EffortSummary, EffortSkills, Skill} from './styles/experience';
+import {Container, Content, Title, Back,JobContainer, JobSide, Jobs, JobDescip, Job, JobTitle, JobYear, Summary, Intro, Company, Efforts, Effort, EffortSummary, EffortSkills, Skill} from './styles/experience';
  
   const Experience = props => {
 
       const {viewJob, viewJobEffort} = props
         return(
             <Container showMenu={props.showMenu} here={props.here} current={props.current}>
-            <Title>{'< Work />'}</Title>
+            <Title>Work</Title>
                 <Content>
                 <JobContainer>   
-                        <Jobs>
+                        <Jobs viewJob={viewJob!==null? true: false}>
                             { data.data.technical.map((job, index) => (
                                     <Job onClick={()=> props.handleViewJob(index)} selected={index === viewJob? true : false}>
                                         <JobTitle>{job.role}</JobTitle>
@@ -19,7 +19,9 @@ import {Container, Content, Title, JobContainer, JobSide, Jobs, JobDescip, Job, 
                                     ))
                             }
                         </Jobs>
+                        {viewJob!==null&&
                         <JobDescip>
+                            <Back onClick={()=> props.handleCancelViewJob()}>x</Back>
                             <Company>
                                 {props.tech? data.data.technical[viewJob].description.company : data.data.nonTechnical[viewJob].description.company}
                             </Company>
@@ -46,7 +48,7 @@ import {Container, Content, Title, JobContainer, JobSide, Jobs, JobDescip, Job, 
                                 )
                             }
                             </EffortSkills>
-                        </JobDescip>
+                        </JobDescip>}
                         </JobContainer> 
                       
                         

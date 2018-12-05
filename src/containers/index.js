@@ -8,15 +8,18 @@ class Home extends Component {
     
     state = {
         technical: true, 
-        viewJob: 0,
+        viewJob: null,
         viewJobEffort: 0,
         helloAgain: false,
         animateIntro: false,
         lastScroll: 0,
         view: 0,
         showMenu: false,
-        currentView: 0,
+        currentView: 1,
         youHereAlready: false
+    }
+    handleCancelViewJob = () => {
+        this.setState({viewJob: null});
     }
     updateComponent = () => {
         this.setState({animate: true})
@@ -85,12 +88,12 @@ class Home extends Component {
                         <MenuItem onClick={() => this.handleShowView(2)} >Projects</MenuItem>
                     </Menu>
                 </MenuWrapper>
-                {this.state.currentView!==2&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>^</NavNext>}
-                {this.state.currentView!==0&&<NavPrev onClick={()=> this.handleShowView(this.state.currentView - 1)}>^</NavPrev>}
+                {this.state.currentView!==2&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>></NavNext>}
+                {this.state.currentView!==0&&<NavPrev onClick={()=> this.handleShowView(this.state.currentView - 1)}>{'<'}</NavPrev>}
 
                 {this.state.currentView=== 0&&<About showMenu={this.state.showMenu} here={this.state.youHereAlready} animateIntro={this.state.animateIntro}hello={this.state.helloAgain}/>}
                 {this.state.currentView === 1&&<Experience showMenu={this.state.showMenu} here={this.state.youHereAlready}viewJob={this.state.viewJob} handleViewJob={this.handleViewJob} viewJobEffort={this.state.viewJobEffort}
-                        handleViewJobEffort={this.handleViewJobEffort} tech={this.state.technical} toggleTechView={this.toggleTechnicalView}/>}
+                        handleViewJobEffort={this.handleViewJobEffort} handleCancelViewJob={this.handleCancelViewJob} tech={this.state.technical} toggleTechView={this.toggleTechnicalView}/>}
                 {this.state.currentView ===2&& <Projects showMenu={this.state.showMenu} here={this.state.youHereAlready} />}
                 {/*<Skills top={this.top} more={this.state.more}/>     */}
             </Container>
