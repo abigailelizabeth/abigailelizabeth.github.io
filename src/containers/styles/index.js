@@ -216,7 +216,7 @@ export const Menu = styled.div`
     height: 60vh;
     top: 0;
     position: relative;
-    border-inline-start: 2px solid white;
+    border-inline-start: 2px solid #FFAFAA;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -248,7 +248,8 @@ export const MenuBall = styled.button`
         left: -1.5vw;
         height: 6vh;
         width: 6vh;
-        background-color: ${props => props.notProjects? "pink" : "white"};
+        border: 2px solid 	#FF928B;
+        background-color: 	#FF928B;
         border-radius: 50%;
         animation: ${props => props.showMenu? bounceBall : ""};
         animation-timing-function: ease-in-out;
@@ -297,10 +298,11 @@ export const Arrow = styled.div`
 
 export const MenuItem = styled.p`
     position: relative;
+    color: white;
     width: 20vw;
     left: -.3vw;
     height: 4vh;
-    border-inline-start: .5vw solid white;
+    border-inline-start: .5vw solid #FFAFAA;
     display: flex;
     align-items: center;
     font-size: calc(.2em + .5vw)

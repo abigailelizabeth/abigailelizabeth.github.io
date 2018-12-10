@@ -14,7 +14,8 @@ import {Container, Hello, PinkBlock, Content, ImageWrapper, BioWrapper, BioSecti
                 
                 <PinkBlock />
                 <Content >
-                    <ImageWrapper src={require('../static/images/abby.jpg')}/>
+                    {/* <ImageWrapper src={require('../static/images/closedeyes.svg')}></ImageWrapper> */}
+                <ImageWrapper src={props.showMenu? require("../static/images/abbsleft.svg"):  require("../static/images/abbs.svg")}/>
                     <BioWrapper>
                         <BioSection>
                             {data.about.intro} <br/>

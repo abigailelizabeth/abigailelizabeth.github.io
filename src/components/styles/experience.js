@@ -70,13 +70,14 @@ export const Content = styled.div`
    right: 0;
    height: 100vh;
    width: 90vw;
+   
    animation: ${experienceEntrance} 2s ease-in-out 0s 1;
 `;
 
 export const Title = styled.h1`
    font-size: calc(2em + 5vw);
    font-weight: bold;
-
+   z-index: 5;
    color: white;
    position: absolute;
    display: block;
@@ -91,7 +92,6 @@ export const Title = styled.h1`
 
       width: 50vw;
 
-      border-bottom: 2px solid #2ab7ca;
       
       font-size: calc(.5em + 5vw);
    }

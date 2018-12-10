@@ -7,7 +7,7 @@ const helloFlow = keyframes`
    top: 50vh;
 }
 100% {
-   right: 15vw;
+   right: 20vw;
    top: 0vh;
 }
 `;
@@ -52,7 +52,7 @@ const pinkFlow = keyframes`
 `;
 export const Container = styled.div`
    position: relative;
-   background-color: #2ab7ca;
+   background-color: #27a7b8;
    height: 100vh;
    width: 100vw;
    transition-timing-function: ease-in-out;
@@ -87,7 +87,7 @@ export const Container = styled.div`
       font-size: calc(1em + 10vw);
       animation: ${helloFlow} 2s ease-in-out 0s 1; 
       top: 0vh;
-      right: 15vw;
+      right: 20vw;
    }
  `;
 
@@ -97,7 +97,7 @@ export const Container = styled.div`
    height: 100vh;
    width: 50vw;
    right: -100%;
-   background-color: pink;
+   background-color: #ff928b;
    animation: ${pinkFlow} 2s ease-in-out 0s 1;
 
  `;
@@ -128,7 +128,7 @@ export const Container = styled.div`
    order: 1;
    src: ${props => props.src};
    @media only screen and (min-width: 768px) {
-      width: 25vw;
+      width: 20vw;
    }
  `;
  export const BioWrapper = styled.div`
