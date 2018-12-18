@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bb7a00200abd86ae9145",
+    "revision": "6d7d9bf89225ef7dbfe8",
     "url": "/abigailelizabeth.github.io/static/css/main.fd1aa89a.chunk.css"
   },
   {
-    "revision": "bb7a00200abd86ae9145",
-    "url": "/abigailelizabeth.github.io/static/js/main.bb7a0020.chunk.js"
+    "revision": "6d7d9bf89225ef7dbfe8",
+    "url": "/abigailelizabeth.github.io/static/js/main.6d7d9bf8.chunk.js"
   },
   {
     "revision": "a50dc44be319cf1bd13d",
@@ -76,7 +76,15 @@ self.__precacheManifest = [
     "url": "/abigailelizabeth.github.io/static/media/circlecolor.0f5b49af.svg"
   },
   {
-    "revision": "90f38632fd23ffca5cbeb648435f75ae",
+    "revision": "795ae91e6434060d428ad1eba9152fe1",
+    "url": "/abigailelizabeth.github.io/static/media/linkedIn.795ae91e.svg"
+  },
+  {
+    "revision": "8e7f0afaef2fd54bf3af776466bbb3bb",
+    "url": "/abigailelizabeth.github.io/static/media/instagram.8e7f0afa.svg"
+  },
+  {
+    "revision": "d5c861fcdd15cce264d4ebe17153bf59",
     "url": "/abigailelizabeth.github.io/index.html"
   }
 ];
