@@ -3,7 +3,7 @@ import About from '../components/about';
 import Experience from '../components/experience';
 import Projects from '../components/projects';
 import Doodles from '../components/doodles';
-import {Container,MenuColor, MenuWrapper,MenuSm, Menu, MenuBall, MenuItem, Arrow, NavNext, NavPrev} from './styles/index';
+import {Container,MenuColor, MenuWrapper, ContactWrapper, MenuSm, Menu,BallBox, MenuBall, MenuItem, NavNext, NavPrev} from './styles/index';
 class Home extends Component {
     
     state = {
@@ -15,7 +15,7 @@ class Home extends Component {
         lastScroll: 0,
         view: 0,
         showMenu: false,
-        currentView: 0,
+        currentView: 2,
         youHereAlready: false,
         viewProject: true
     }
@@ -28,16 +28,12 @@ class Home extends Component {
     updateComponent = () => {
         this.setState({animate: true})
     }
-    
     handleShowMenu = (set) => {
-        
         if(set !== undefined)
             this.setState({showMenu: set})
         else
             this.setState(state => ({showMenu: !state.showMenu}))
     }
-    
-    
     handleShowView = (view) => {
         if(view === this.state.currentView){
             this.setState({youHereAlready: true })
@@ -47,14 +43,15 @@ class Home extends Component {
             this.setState({currentView: view, showMenu: false, viewJob: null})
         }
     }
-
   
-   
     toggleTechnicalView = () => {
         this.setState(state => ({technical: !state.technical, viewJob: 0, viewJobEffort: 0}))
     }
     handleViewJob = (index) => {
-        this.setState({viewJob: index, viewJobEffort: 0})
+        if(this.state.viewJob !== null)
+            this.setState({viewJob: null, viewJobEffort: 0})
+        else
+            this.setState({viewJob: index, viewJobEffort: 0})
     }
     handleViewJobEffort = (index) => {
         this.setState({viewJobEffort: index})
@@ -65,15 +62,27 @@ class Home extends Component {
                 <MenuSm onClick={() => this.handleShowMenu()}><MenuColor/>=</MenuSm>
                 <MenuWrapper onMouseEnter={() => this.handleShowMenu(true)} onMouseLeave={() =>this.handleShowMenu(false)}>
                     <Menu show={this.state.showMenu} >
-                        
-                        <MenuBall notProjects={this.state.currentView!==3? true: false}showMenu={this.state.showMenu} onClick={this.handleShowMenu}><Arrow showMenu={this.state.showMenu}>.</Arrow><Arrow>.</Arrow><Arrow>.</Arrow><Arrow>.</Arrow></MenuBall>
+                        <BallBox showMenu={this.state.showMenu} onClick={this.handleShowMenu}>
+                            <MenuBall src={require("../static/images/circle.svg")}/>
+                            <MenuBall src={require("../static/images/circlecolor.svg")}/>
+                        </BallBox>
+
                         <MenuItem onClick={() => this.handleShowView(0)} >About</MenuItem>
                         <MenuItem onClick={() => this.handleShowView(1)}>Experience</MenuItem>
                         <MenuItem onClick={() => this.handleShowView(2)} >Projects</MenuItem>
                         <MenuItem onClick={() => this.handleShowView(3)}>Doodles</MenuItem>
                     </Menu>
                 </MenuWrapper>
-                {this.state.currentView!==2&&!this.state.showMenu&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>></NavNext>}
+                <ContactWrapper>
+                    <a href="https://www.linkedin.com/in/abigail-elizabeth-barron/">
+                        <img src={require("../static/images/linkedIn.svg")}/>
+                    </a>
+                    <a href="https://www.instagram.com/frizzynormality/">
+                        <img src={require("../static/images/instagram.svg")}/>
+                    </a>
+                </ContactWrapper>
+
+                {this.state.currentView!==3&&!this.state.showMenu&&<NavNext onClick={()=> this.handleShowView(this.state.currentView + 1)}>></NavNext>}
                 {this.state.currentView!==0&&!this.state.showMenu&&<NavPrev onClick={()=> this.handleShowView(this.state.currentView - 1)}>{'<'}</NavPrev>}
 
                 {this.state.currentView=== 0&&<About showMenu={this.state.showMenu} here={this.state.youHereAlready} animateIntro={this.state.animateIntro}hello={this.state.helloAgain}/>}
@@ -82,7 +91,6 @@ class Home extends Component {
                 {this.state.currentView ===2&& <Projects showMenu={this.state.showMenu} here={this.state.youHereAlready} viewProject={this.state.viewProject} toggleProjectView={this.handleViewProject}/>}
                 {this.state.currentView ===3&& <Doodles showMenu={this.state.showMenu} here={this.state.youHereAlready}/>}
             </Container>
-                
         );   
     }
 }

@@ -1,15 +1,27 @@
 import React from 'react';
 import * as data from '../data/work';
-import {Container, Content, Title, Back,JobContainer, Jobs, JobDescip, Job, JobTitle, JobYear, Summary, Intro, Company, Efforts, Effort, EffortSummary, EffortSkills, Skill} from './styles/experience';
+import {Container, Content, ContentWrapper, Title, Animate,AnimateContainer, JobContainer, Jobs, JobDescip, Job, JobTitle, JobYear, Summary, Intro, Company, Efforts, Effort, EffortSummary, EffortSkills, Skill, Doodle} from './styles/experience';
  
   const Experience = props => {
 
       const {viewJob, viewJobEffort} = props
         return(
             <Container showMenu={props.showMenu} here={props.here} current={props.current}>
-            <Title>Work</Title>
                 <Content>
-                <JobContainer>   
+                <Title>Work</Title>
+                <ContentWrapper>
+                
+                <Animate>
+                    <AnimateContainer>
+                    <Doodle src={require("../static/images/prehighfive.svg")}/>
+                    <Doodle src={require("../static/images/hands.svg")}/>
+                    <Doodle src={require("../static/images/handcollision.svg")}/>
+                    </AnimateContainer>
+                
+                </Animate>
+              
+                <JobContainer> 
+                        {viewJob===null&&
                         <Jobs viewJob={viewJob!==null? true: false}>
                             { data.data.technical.map((job, index) => (
                                     <Job onClick={()=> props.handleViewJob(index)} selected={index === viewJob? true : false}>
@@ -18,12 +30,13 @@ import {Container, Content, Title, Back,JobContainer, Jobs, JobDescip, Job, JobT
                                     </Job>
                                     ))
                             }
-                        </Jobs>
+                        </Jobs>}
                         {viewJob!==null&&
                         <JobDescip>
-                            <Back onClick={()=> props.handleCancelViewJob()}>x</Back>
+                            <button onClick={() => props.handleCancelViewJob()}>{'<'} Back</button>
+
                             <Company>
-                                {props.tech? data.data.technical[viewJob].description.company : data.data.nonTechnical[viewJob].description.company}
+                                {props.tech? data.data.technical[viewJob].description.company + ' - ' + data.data.technical[viewJob].role : data.data.nonTechnical[viewJob].description.company}
                             </Company>
                             <Summary>
                                 {props.tech? data.data.technical[viewJob].description.summary : data.data.nonTechnical[viewJob].description.summary }
@@ -49,10 +62,9 @@ import {Container, Content, Title, Back,JobContainer, Jobs, JobDescip, Job, JobT
                             }
                             </EffortSkills>
                         </JobDescip>}
-                        </JobContainer> 
-                      
                         
-                                  
+                        </JobContainer>   
+                        </ContentWrapper> 
                 </Content> 
         </Container>            
     );

@@ -48,36 +48,7 @@ const menuGlow = keyframes`
 }
 
 `;
-const arrowEntice = keyframes`
-  0% {
-    top: 0vh;
-    left: 2vw;
-  }
-  15% {
-      top: 1vh;
-      left: 1vw;
-  }
-  30% {
-    top: 4vh;
-    left: 0.5vw;
-  }
-  55% {
-      top: 1vh
-      left: 0vw;
-  }
-  75%{
-      top: 4vh;
-      left: 2vw;
-  }
-  85%{
-    top: 1vh;
-    left: .5vw;
-}
-100%{
-    top: 0vh;
-    left: 2vw;
-}
-`
+
 const bounceBall = keyframes`
     0% {
         top: 5vh;
@@ -108,6 +79,24 @@ const menuItemDance = keyframes`
     100% {
         left: -.3vw;
     }
+`;
+const ballRingDance = keyframes`
+0%{
+    top: -.5vh;
+}
+25%{
+    left: .5vw;
+}
+50%{
+    top: .5vh;
+    
+}
+75%{
+    left: -.5vw;
+}
+100%{
+    top: -.5vh;
+}
 `;
 export const Container = styled.div`
 
@@ -145,12 +134,14 @@ export const MenuSm = styled.div`
     }
 `;
 export const MenuWrapper = styled.div`
+
     z-index: 5;
     overflow: hidden;
     position: fixed;
     top: 20vh;
     right: 3vw;
     width: 25vw;
+    height: 90vh;
     display: flex;
     justify-content: center;    
 
@@ -166,6 +157,23 @@ export const MenuWrapper = styled.div`
     }
     
 `;
+
+export const ContactWrapper = styled.div`
+    z-index: 4;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    width: 5vw;
+    height: 100vh;
+    justify-content: space-around;
+    > a {
+        > img {
+        width: 3vw;
+        }
+    }
+`;
+
 
 export const NavNext = styled.div`
     z-index: 5;
@@ -226,6 +234,7 @@ export const Menu = styled.div`
     animation-duration: 1.5s;
     animation-iteration-count: ${props => props.show? "1": "infinite"};
     animation-delay: 0s;
+    border-image: url("../../static/images/string.svg") 30 round;
 
     @media only screen and (min-width: 768px) {
         animation-name: ${props => props.show ? menuShow  : menuEntice };
@@ -236,64 +245,36 @@ export const Menu = styled.div`
     }
 
 `;
-
-export const MenuBall = styled.button`
-    display: none;
+export const BallBox = styled.div`
+display: none;
     @media only screen and (min-width: 768px) {
         display: block;
         order: 4;
-        color: ${props => props.notProjects?"white": "pink"};
         position: relative;
         bottom: -5vh;
         left: -1.5vw;
         height: 6vh;
         width: 6vh;
-        border: 2px solid 	#FF928B;
-        background-color: 	#FF928B;
-        border-radius: 50%;
         animation: ${props => props.showMenu? bounceBall : ""};
         animation-timing-function: ease-in-out;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
         animation-delay: 0s;
-}
-    
+    }
 `;
-export const Arrow = styled.div`
-
+export const MenuBall = styled.img`
     position: absolute;
-    transform: ${props => !props.showMenu?"rotate(180deg)" :""};
-    font-size: calc(.9em + .8vw);
-    font-weight: bold;
-    animation-name: ${arrowEntice};
-    
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
+    left: 0;
+    width: 100%;
     &:nth-child(1){
-        
-        animation-timing-function: ease-in-out;
-        animation-duration: 3s;
-        color: red;
+        top: 0;
+        z-index:2;
+        animation: ${ballRingDance} 2s linear 0s infinite;   
     }
     &:nth-child(2){
-        animation-timing-function: linear;
-    animation-duration: 3.5s;
-        color: white;
+        width: 95%;
     }
-    &:nth-child(3){
-        animation-direction: reverse;
-        animation-timing-function: ease-in-out;
-        animation-duration: 3.8s;
-        color: #2ab7ca;
-    }
-    &:nth-child(4){
-        animation-direction: reverse;
-        animation-timing-function: linear;
-        animation-duration: 3.2s;
-        color: yellow;
-    }
-
-
+    
 `;
 
 export const MenuItem = styled.p`

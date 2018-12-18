@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Content, Title, Component, Pencil, Lead, ProjectContainer, ProjectWrapper, ProjectPreview, ProjectDesc, Database, TravelSpace, UsrReq, Bubbles, Bubble, Loading, Envelope, DataStream} from './styles/projects';
+import { Container, Content, Title, Button, Component, Pencil, Lead, ProjectContainer, ProjectWrapper, ProjectPreview, ProjectDesc, Database, TravelSpace, UsrReq, Bubbles, Bubble, Loading, Envelope, DataStream} from './styles/projects';
   const Projects = props => {
     return(
         <Container showMenu={props.showMenu} here={props.here}>
             <Title>Projects</Title>
             <Content>
-                {props.viewProject&&<ProjectContainer>
-                    <button onClick={() => props.toggleProjectView()}>Next Project</button>
+                {!props.viewProject&&<ProjectContainer>
+                    <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
                     <ProjectWrapper>
                         <ProjectPreview>
                         <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kerv.gif')}/>
@@ -33,8 +33,8 @@ import { Container, Content, Title, Component, Pencil, Lead, ProjectContainer, P
                 </ProjectContainer>}
 
                   {/* next project  */}
-                  {!props.viewProject&&<ProjectContainer> 
-                    <button onClick={() => props.toggleProjectView()}>Next Project</button>
+                  {props.viewProject&&<ProjectContainer> 
+                    <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
                        <ProjectWrapper>
                           <ProjectPreview>
                           <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kervkue.gif')}/>

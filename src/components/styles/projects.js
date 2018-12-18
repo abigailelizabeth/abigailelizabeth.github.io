@@ -481,7 +481,7 @@ const projectsEntrance = keyframes`
       right: -100vw;
    }
    100% {
-      right: 0vw;
+      right: 3vw;
    }
 `;
 const projectEntranceTitle = keyframes`
@@ -525,11 +525,20 @@ export const Content = styled.div`
  
 
     @media only screen and (min-width: 768px) {
-        display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        align-items: flex-start;
+        right: 3vw;        
     }
+`;
+
+export const Button = styled.button`
+    background:transparent;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 4px;
+
 `;
 
 export const Title = styled.h1`
@@ -556,7 +565,25 @@ export const Title = styled.h1`
 
 `;
 export const ProjectDesc = styled.div`
-    display: none;
+    position: relative;
+    margin-top: 0vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 45vh;
+
+    > span {
+        font-size: calc(.3em + .8vw);
+        position: absolute;
+        top: 25vh;
+        right: 23vw;
+        border: 1px dashed white;
+        width: 8vw;
+        height: 20vh;
+        color: white;
+    }
     @media only screen and (min-width: 768px) {
         position: relative;
         margin-top: 0vh;
@@ -586,8 +613,9 @@ export const ProjectContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 80vw;
+    top: 10vh;
 
-    justify-content: flex-start;
+    justify-content: flex-end;
     
 
     @media only screen and (min-width: 768px) {
@@ -659,7 +687,7 @@ export const Component = styled.div`
     justify-content: flex-start;
     align-items: center;
     height: 25vh;
-    width: 10vw;
+    width: 16vw;
     background-color: white;
     border-radius: 10px;
     > p {
@@ -669,7 +697,7 @@ export const Component = styled.div`
             position: relative;
             background-color: #ffafaa;
             color: white;
-            font-size: calc(.2em + 1vw);
+            font-size: calc(.6em + 1vw);
             width: 100%;
             top: 0;
             margin-top: 0;
@@ -689,7 +717,41 @@ export const Component = styled.div`
         }
     }
 
-    ${props => props.type==="lg-server"? "position: absolute; width: 20vw;top: 70vh; right: 5vw;": ""}
+    ${props => props.type==="lg-server"? "position: absolute; width: 25vw;top: 35vh; right: 12vw;": ""}
+
+    @media only screen and (min-width: 768px) {
+        width: 10vw;
+        height: 25vh;
+
+        > p {
+            &:nth-child(1){
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                position: relative;
+                background-color: #ffafaa;
+                color: white;
+                font-size: calc(.2em + 1vw);
+                width: 100%;
+                top: 0;
+                margin-top: 0;
+                padding-bottom: 2vh;
+                border-bottom: 1px solid white;
+            }
+            &:nth-child(2){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 4px dotted #2ab7ca;
+                border-radius: 10px;
+                width: 90%;
+                height: 60%;
+                margin-top: 0;
+                
+            }
+        }
+        ${props => props.type==="lg-server"? "position: absolute; width: 20vw;top: 70vh; right: 5vw;": ""}
+
+    }
 `;
 
 export const UsrReq = styled.div`
@@ -706,6 +768,7 @@ export const UsrReq = styled.div`
     background-color: pink;
     z-index: 1;
     animation: ${processRequest} 15s linear 2s infinite;
+   
 
 `
 export const Loading = styled.div`
@@ -727,7 +790,7 @@ export const Database = styled.div`
     position: relative;
     top: -2vh;
     height: 25vh;
-    width: 8vw;
+    width: 14vw;
     background-color: white;
     border-radius: 50px;
     border-bottom-left-radius: 30px;
@@ -739,24 +802,46 @@ export const Database = styled.div`
         color: white;
         top: 0;
         padding-top: 3vh;
-        height: 50px
+        height: 35px
         background-color: #7BE0AD;
         border-radius: 50%;
         position: relative;
-        font-size: calc(.2em + 1vw);
+        font-size: calc(.6em + 1vw);
         width: 100%;
         border-bottom: 1px solid black;
     }
+
+    @media only screen and (min-width: 768px) {
+        width: 8vw;
+
+        > p {
+            margin-top: 0;
+            color: white;
+            top: 0;
+            padding-top: 3vh;
+            height: 50px
+            background-color: #7BE0AD;
+            border-radius: 50%;
+            position: relative;
+            font-size: calc(.2em + 1vw);
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+    }
+
 
 `;
 
 export const TravelSpace = styled.div`
     color: white;
-    width: 10vw;
+    width: 8vw;
     height: 5vh;
     border-top: 1px dashed white;
     border-bottom: 1px dashed white;
     ${props => props.type === "watchStream"? "border-bottom: none; position: relative;top: -2vh;" : props.type === "socket"? "border-top: none;position: relative;top: 8vh;" : ""}
+    @media only screen and (min-width: 768px) {
+        width: 10vw;
+    }
 `;
 
 export const Bubbles = styled.div`
@@ -764,7 +849,7 @@ export const Bubbles = styled.div`
     position: relative;
     top: 1vh;
     left: 5vw;
-    width: 6vw;
+    width: 10vw;
     display: flex;
     flex-direction: row;
     z-index: 1;
@@ -772,13 +857,15 @@ export const Bubbles = styled.div`
     
     animation: ${props => chooseBubbleProcess(props.type)} 15s linear 2s infinite;
  
-
+    @media only screen and (min-width: 768px) {
+        width: 6vw;
+    }
 
 `;
 
 export const Bubble = styled.div`
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 100%;
 
     &:nth-child(1){
@@ -790,6 +877,12 @@ export const Bubble = styled.div`
     }
     &:nth-child(3){
         background-color: #2ab7ca;
+    }
+
+    @media only screen and (min-width: 768px) {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
     }
     
 `;

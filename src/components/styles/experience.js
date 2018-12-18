@@ -1,5 +1,33 @@
 import styled, {keyframes} from 'styled-components';
 
+const jobContainerEnter = keyframes`
+0%{
+   top: 100vh;
+}
+83.3%{
+   top: 100vh;
+}
+100%{
+   top: -10vh;
+}
+`;
+const doodleTranslate = keyframes`
+0%{
+   top: 0vh;
+   left: 0vw;
+   width: 90vw;
+}
+80%{
+   top: 0vh;
+   left: 0vw;
+   width: 90vw;
+}
+100%{
+   width: 30vw;
+   top: -18vh;
+   left: 40vw;
+}
+`;
 const experienceEntrance = keyframes`
    0% {
       right: -100vw;
@@ -8,12 +36,68 @@ const experienceEntrance = keyframes`
       right: 0vw;
    }
 `;
-const experienceEntranceTitle = keyframes`
+const jobsHeightFlow = keyframes`
    0% {
-      right: -100vw;
+      height: 10vh;
    }
    100% {
-      right: 40vw;
+      height: 60vh;
+   }
+`;
+const pairPrograma = keyframes`
+0%{
+   opacity: 1;
+}
+32.5%{
+   opacity: 1;
+}
+33%{
+   opacity: 0;
+}
+100%{
+   opacity: 0;
+}
+`;
+const pairProgramb = keyframes`
+0%{
+   opacity: 0;
+}
+32.5%{
+   opacity: 0;
+}
+33%{
+   opacity: 1;
+}
+65.5%{
+   opacity: 1;
+}
+66%{
+   opacity: 0;
+}
+100%{
+   opacity: 0;
+}
+`;
+const pairProgramc = keyframes`
+0%{
+   opacity: 0;
+}
+65.5%{
+   opacity: 0;
+}
+66%{
+   opacity: 1;
+}
+100%{
+   opacity: 1;
+}
+`;
+const experienceEntranceTitle = keyframes`
+   0% {
+      right: -200vw;
+   }
+   100% {
+      right: 0vw;
    }
 `;
 const descriptionEntrance = keyframes`
@@ -29,17 +113,18 @@ const descriptionEntrance = keyframes`
 const descriptionEntranceLg = keyframes`
    0% {
       top: 0vh;
-      left: -100vw;
+      right: -100vw;
    }
    100% {
-      top: 0;
-      left: 0;
+      top: 0vh;
+      right: 0;
    }
 `;
 
 export const Container = styled.div`
    position: relative;
    height: 100vh;
+   width: 100vw;
    background: transparent;
    transition-timing-function: ease-in-out;
    transition-duration: ${props => props.here? ".2s" : "1s"};
@@ -52,6 +137,8 @@ export const Container = styled.div`
    }
 
    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
       transition-duration: ${props => props.here? ".2s" : "1s"};
       transform: ${props => props.showMenu&&!props.here? "translate(15vw)" : props.showMenu&&props.here? "translate(15vw, 3vh)":  "translate(0vw)"};
       > * {
@@ -67,50 +154,74 @@ export const Content = styled.div`
    display: flex;
    justify-content: center;
    flex-direction: column;
-   right: 0;
    height: 100vh;
+   right: 0vw;
    width: 90vw;
    
    animation: ${experienceEntrance} 2s ease-in-out 0s 1;
+   @media only screen and (min-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+   }
+`;
+export const ContentWrapper = styled.div`
+   position: relative;
+   order: 2;
+   width: 100%;
+   height: 95vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
 `;
 
 export const Title = styled.h1`
+   content: 1;
    font-size: calc(2em + 5vw);
    font-weight: bold;
    z-index: 5;
    color: white;
-   position: absolute;
+   position: relative;
    display: block;
    width: 65vw;
-   right: 40vw;
+   right: 20vw;
 
    animation: ${experienceEntranceTitle} 2s ease-in-out 0s 1;
 
    @media only screen and (min-width: 768px) {
+      top: 0vh;
       text-align: left;
-      right: 40vw;
-
-      width: 50vw;
+      right: 0vw;
+      height: 10vh;
+      width: 20vw;
+      margin-top: 5vh;
 
       
-      font-size: calc(.5em + 5vw);
+      font-size: calc(.5em + 6vw);
    }
 `;
 export const JobContainer = styled.div`
    padding: 5vh 0vw 0vw 4vh;
    position: relative;
-   
+   order: 2;
    width: 80vw;
    text-align: left;
+   top: -10vh;
+   height: auto;
+   animation: ${jobContainerEnter} 6s linear 0s 1;
    @media only screen and (min-width: 768px) {
-      justify-content: center;
-      display: flex;
-      padding: 5vh 0vw 0vw 4vh;
+      animation: none;
+      top: 0;
+      width: 45vw;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
       position: relative;
-      min-height: 70vh;
-      justify-content: flex-center;
+      min-height: 80vh;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      border: none;
    }
 
 `;
@@ -124,67 +235,56 @@ export const Jobs = styled.div`
    padding: 2px;
    left:0;
    right: 0;
-   transform: ${props => props.viewJob? "translate(80vw,0vh)" : ""};
    transition-timing-function: linear;
    transition-duration: 1s;
 
 
    @media only screen and (min-width: 768px) {
-      order: 2;
+      width: 80%;
+      order: 1;
+      top: 0vh;
+      padding: 0;
       position: relative;
-      top: 0;
+      overflow: hidden;
+      height: auto;
+      animation: ${jobsHeightFlow} 2s ease-in-out 0s 1;
       background-color: rgb(244,244,248, .2);
-      width: 30vw;
       display: flex;
       flex-direction: column;
-      margin-left: 10vw;
       border-radius: 4px;
-      transform: none;
    }
 `;
-export const Back = styled.button`
-   position: absolute;
-   border: 1px solid red;
-   width: 4vw;
-   height: 4vw;
-   padding: 2px;
-   padding-top: 0px;
-   border-radius: 50%;
-   background-color: red;
-   right: 2vw;
-   color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: calc(.2em + 1vw);
-   @media only screen and (min-width: 768px) {
-      display: none;
-   }
-`;
+
 export const JobDescip = styled.div`
    position: absolute;
    top: -30vh;
    width: 70vw;
    padding: 8px;
    font-size: calc(1em + 3vw);
-   border: 2px solid white;
-   border-radius: 2%;
-   left: 0;
-   right: 0;
+   right: 10vw;
    color: white;
-   animation: ${descriptionEntrance} 1s ease-in-out 0s 1;
+   animation: ${descriptionEntrance} .5s ease-in-out 0s 1;
+   > button {
+      background: transparent;
+      color: white;
+      padding: 8px;
+      border: none;
+      cursor: pointer;
+   }
    
 
    @media only screen and (min-width: 768px) {
-      order: 1;
-      padding: none;
-      top: 0;
+      order: 2;
+      padding: 0;
+      right: 0;
       position: relative;
-      margin: 2vh 5vw 0vh 1vw;
-      width: 50vw;
+      margin: 0;
+      top: 0vh;
+      width: 90%;
       text-align: left;
       border: none;
       font-size: calc(.3em + 1vw);
+      height: 68vh;
       animation: ${descriptionEntranceLg} 1s ease-in-out 0s 1;
 
    }
@@ -198,13 +298,14 @@ export const Job = styled.div`
    border-radius: 3px;
    padding: 5px;
 @media only screen and (min-width: 768px) {
+   order: 2;
    &:hover {
       background-color: ${props => !props.selected? "#d5dada" : ""};
       }
-      position: ${props => props.selected? "absolute" : ""}
-   ${props => props.selected? "transform: translate(-30vw,-8vh);color: white;border-left:2px solid #2ab7ca; border-bottom:2px solid #2ab7ca; " : ""};
+   ${props => props.selected? "color: white;border-left:2px solid #2ab7ca; border-bottom:2px solid #2ab7ca; order:1; " : ""};
    width: auto;
    box-shadow: none;
+   
    background-color: transparent;
    border: none;
    margin: none;
@@ -217,6 +318,7 @@ export const Job = styled.div`
 `;
 
 export const JobTitle = styled.div`
+  
 
 `;
 export const JobYear = styled.div`
@@ -228,6 +330,11 @@ export const JobYear = styled.div`
 export const Company = styled.div`
    font-weight: bold;
    padding: 2vh 0vw 2vh 0vh;
+   font-size: calc(.4em + 1vw);
+   @media only screen and (min-width: 768px) {
+
+      font-weight: bold;
+   }
 
 `;
 export const Summary = styled.div`
@@ -271,7 +378,8 @@ export const EffortSkills = styled.div`
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
-   flex-wrap: wrap;
+   flex-wrap: no-wrap;
+   overflow: auto;
 
 `;
 export const Skill = styled.div`
@@ -282,6 +390,82 @@ export const Skill = styled.div`
    padding: .5vh .5vh;
    text-transform: uppercase;
    border: 2px solid white;
-   font-size: calc(.05em + .7vw);
+   font-size: calc(.2em + 1vw);
+   @media only screen and (min-width: 768px) {
+      font-size: calc(.05em + .7vw);
 
+   }
+
+`;
+
+export const Doodle = styled.img`
+   position: absolute;
+   top: 0vh;
+   width: 100%;
+   height: auto;
+   left: 0;
+   &:nth-child(1){
+      opacity: 1;
+      animation: ${pairPrograma} 2s linear 2s 1;
+
+   }
+   &:nth-child(2){
+      opacity: 0;
+      animation: ${pairProgramb} 2s linear 2s 1;
+
+   }
+   &:nth-child(3){
+      opacity: 0;
+      animation: ${pairProgramc} 2s linear 2s 1;
+   }
+   @media only screen and (min-width: 768px) {
+      &:nth-child(1){
+         opacity: 1;
+         animation: ${pairPrograma} 5s linear 2s infinite;
+   
+      }
+      &:nth-child(2){
+         opacity: 0;
+         animation: ${pairProgramb} 5s linear 2s infinite;
+   
+      }
+      &:nth-child(3){
+         opacity: 0;
+         animation: ${pairProgramc} 5s linear 2s infinite;
+      }
+   }
+
+`;
+export const Animate = styled.div`
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   width: 30vw;
+   position: absolute;
+   top: -18vh;
+   left: 40vw;
+   min-height: 70vh;
+   animation: ${doodleTranslate} 5s linear 0s 1;
+
+@media only screen and (min-width: 768px) {
+   animation: none;
+   position: relative;
+   top: 0vh;
+   left: 0;
+   order: 1;
+   width: 40vw;
+   min-height: 70vh;
+   
+}
+
+`;
+export const AnimateContainer = styled.div`
+   width: 90%;
+   position: relative;
+   height: 70vh;
+@media only screen and (min-width: 768px) {
+   width: 90%;
+   position: relative;
+   height: 60vh;
+}
 `;

@@ -8,7 +8,7 @@ const Doodles = props => {
                 <Animate>
                     <Frame src={require("../static/images/boygirlone.svg")}/>
                     <Frame src={require("../static/images/boygirltwo.svg")}/>
-                    <Frame src={require("../static/images/painter.svg")}/>
+                    {/* <Frame src={require("../static/images/painter.svg")}/> */}
                     <Frame src={require("../static/images/dude.svg")}/>
                 </Animate>
 

@@ -92,6 +92,7 @@ export const Title = styled.h1`
    font-size: calc(2em + 5vw);
    font-weight: bold;
    animation: ${doodleEntranceTitle} 2s ease-in-out 2s 1;
+   
    @media only screen and (min-width: 768px) {
         position: absolute;
         right: 40vw;
@@ -102,12 +103,12 @@ export const Title = styled.h1`
         font-size: calc(.5em + 5vw);
         font-weight: bold;
    }
-
 `;
 
 export const Animate = styled.div`
    width: 25vw;
    position: relative;
+   top: 20vh;
 `;
 export const Frame = styled.img`
    position: absolute;
