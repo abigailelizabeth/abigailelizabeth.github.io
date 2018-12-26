@@ -10,6 +10,7 @@ const Doodles = props => {
                     <Frame src={require("../static/images/boygirltwo.svg")}/>
                     {/* <Frame src={require("../static/images/painter.svg")}/> */}
                     <Frame src={require("../static/images/dude.svg")}/>
+                    <Frame onClick={props.happyBirthdayJason} src={require("../static/images/dance1.svg")}/>
                 </Animate>
 
             </Content>

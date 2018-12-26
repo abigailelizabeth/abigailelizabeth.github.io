@@ -3,6 +3,7 @@ import About from '../components/about';
 import Experience from '../components/experience';
 import Projects from '../components/projects';
 import Doodles from '../components/doodles';
+import Tribute from '../components/tribute';
 import {Container,MenuColor, MenuWrapper, ContactWrapper, MenuSm, Menu,BallBox, MenuBall, MenuItem, NavNext, NavPrev} from './styles/index';
 class Home extends Component {
     
@@ -42,6 +43,9 @@ class Home extends Component {
         else {
             this.setState({currentView: view, showMenu: false, viewJob: null})
         }
+    }
+    birthdayView = () => {
+        this.setState({currentView: 4, showMenu: false})
     }
   
     toggleTechnicalView = () => {
@@ -89,7 +93,8 @@ class Home extends Component {
                 {this.state.currentView === 1&&<Experience showMenu={this.state.showMenu} here={this.state.youHereAlready}viewJob={this.state.viewJob} handleViewJob={this.handleViewJob} viewJobEffort={this.state.viewJobEffort}
                         handleViewJobEffort={this.handleViewJobEffort} handleCancelViewJob={this.handleCancelViewJob} tech={this.state.technical} toggleTechView={this.toggleTechnicalView}/>}
                 {this.state.currentView ===2&& <Projects showMenu={this.state.showMenu} here={this.state.youHereAlready} viewProject={this.state.viewProject} toggleProjectView={this.handleViewProject}/>}
-                {this.state.currentView ===3&& <Doodles showMenu={this.state.showMenu} here={this.state.youHereAlready}/>}
+                {this.state.currentView ===3&& <Doodles showMenu={this.state.showMenu} here={this.state.youHereAlready} happyBirthdayJason={this.birthdayView}/>}
+                {this.state.currentView===4 && <Tribute />}
             </Container>
         );   
     }
