@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "6d7d9bf89225ef7dbfe8",
-    "url": "/abigailelizabeth.github.io/static/css/main.fd1aa89a.chunk.css"
+    "revision": "0c4a247d921640867d6c",
+    "url": "/abigailelizabeth.github.io/static/css/main.69e96a6b.chunk.css"
   },
   {
-    "revision": "6d7d9bf89225ef7dbfe8",
-    "url": "/abigailelizabeth.github.io/static/js/main.6d7d9bf8.chunk.js"
+    "revision": "0c4a247d921640867d6c",
+    "url": "/abigailelizabeth.github.io/static/js/main.0c4a247d.chunk.js"
   },
   {
-    "revision": "a50dc44be319cf1bd13d",
-    "url": "/abigailelizabeth.github.io/static/js/1.a50dc44b.chunk.js"
+    "revision": "76f142a194e225ae3177",
+    "url": "/abigailelizabeth.github.io/static/js/1.76f142a1.chunk.js"
   },
   {
     "revision": "ec8d0e336303ce90bb5d",
     "url": "/abigailelizabeth.github.io/static/js/runtime~main.ec8d0e33.js"
+  },
+  {
+    "revision": "57def96c0925dfe6186a3e2e9b507b68",
+    "url": "/abigailelizabeth.github.io/static/media/dance1.57def96c.svg"
   },
   {
     "revision": "ff06b7bcefa32835a661453817da4e3b",
@@ -68,6 +72,38 @@ self.__precacheManifest = [
     "url": "/abigailelizabeth.github.io/static/media/dude.95bdb5ac.svg"
   },
   {
+    "revision": "cdf3e16f26bf769e331b5d62693dce37",
+    "url": "/abigailelizabeth.github.io/static/media/jason.cdf3e16f.svg"
+  },
+  {
+    "revision": "ae1fe7ecde2d220446973ea39cf61cf3",
+    "url": "/abigailelizabeth.github.io/static/media/art.ae1fe7ec.svg"
+  },
+  {
+    "revision": "4b86219365275070bfa8c130c8599b30",
+    "url": "/abigailelizabeth.github.io/static/media/coffee.4b862193.svg"
+  },
+  {
+    "revision": "c425d122d08b4013ace3b276b2c9a86b",
+    "url": "/abigailelizabeth.github.io/static/media/camera.c425d122.svg"
+  },
+  {
+    "revision": "5a0b078373c71329e2335c669c44a27e",
+    "url": "/abigailelizabeth.github.io/static/media/korra.5a0b0783.svg"
+  },
+  {
+    "revision": "0b9a4684b7736a58945ccb85b5858cbe",
+    "url": "/abigailelizabeth.github.io/static/media/dance2a.0b9a4684.svg"
+  },
+  {
+    "revision": "567bbbe9f7c4d15447e98d8c9aa2d14c",
+    "url": "/abigailelizabeth.github.io/static/media/dance2.567bbbe9.svg"
+  },
+  {
+    "revision": "f51455cef3abacb5d0e5fa93777edad1",
+    "url": "/abigailelizabeth.github.io/static/media/dance1a.f51455ce.svg"
+  },
+  {
     "revision": "7f891d57388ba6c1113755accf78c31f",
     "url": "/abigailelizabeth.github.io/static/media/circle.7f891d57.svg"
   },
@@ -84,7 +120,7 @@ self.__precacheManifest = [
     "url": "/abigailelizabeth.github.io/static/media/instagram.8e7f0afa.svg"
   },
   {
-    "revision": "d5c861fcdd15cce264d4ebe17153bf59",
+    "revision": "4d8d9052269f91cff25a8304d1adbd92",
     "url": "/abigailelizabeth.github.io/index.html"
   }
 ];
