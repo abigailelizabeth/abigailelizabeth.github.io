@@ -79,8 +79,14 @@ export const Content = styled.div`
    height: 100vh;
    width: 90vw;
    overflow: auto;
-   
    animation: ${experienceEntrance} 2s ease-in-out 0s 1;
+   > div {
+      &:nth-child(2){
+         width: 15vw;
+         left: 50%;
+         top: 15vh;
+      }
+   }
 `;
 export const Title = styled.h1`
    position: absolute;
@@ -91,7 +97,7 @@ export const Title = styled.h1`
    color: white;
    font-size: calc(2em + 5vw);
    font-weight: bold;
-   animation: ${doodleEntranceTitle} 2s ease-in-out 2s 1;
+   animation: ${doodleEntranceTitle} 2s ease-in-out 0s 1;
    
    @media only screen and (min-width: 768px) {
         position: absolute;
@@ -109,6 +115,8 @@ export const Animate = styled.div`
    width: 25vw;
    position: relative;
    top: 20vh;
+   
+
 `;
 export const Frame = styled.img`
    position: absolute;
@@ -124,16 +132,23 @@ export const Frame = styled.img`
    }
    &:nth-child(3) {
        position: relative;
-       top: 5vh;
+       top: 0vh;
        left: 45vw;
-       width: 20vw;
-    opacity: 1;
+       width: 25vw;
+      opacity: 1;
    }
    &:nth-child(4) {
-       width: 20vw;
-    top: 35vh;
-    left: 40vw;
-    width: 15vw;
-    opacity: 1;
+      top: 25vh;
+      left: 40vw;
+      width: 25vw;
+      z-index: 1;
 }
+   &:nth-child(5) {
+      width: 20vw;
+      top: 15vh;
+      left: 61vw;
+      width: 15vw;
+      opacity: 1;
+   }
+
 `;

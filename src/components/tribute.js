@@ -1,5 +1,5 @@
 import React from 'react';
-import {Frame, Container, MessageBox, Animation, Title, Speech, IdeaBox, Art} from './styles/tribute';
+import {FrameD, Container, MessageBox, Animation, Title, Speech, IdeaBox, Art} from './styles/tribute';
 const Tribute = props => {
     return (
         <Container>
@@ -18,10 +18,10 @@ const Tribute = props => {
             </IdeaBox>
             </MessageBox>
             <Animation>
-                <Frame src={require("../static/images/dance1.svg")}/>
-                <Frame src={require("../static/images/dance2a.svg")}/>
-                <Frame src={require("../static/images/dance2.svg")} />
-                <Frame src={require("../static/images/dance1a.svg")}/>
+                <FrameD src={require("../static/images/dance1.svg")}/>
+                <FrameD src={require("../static/images/dance2a.svg")}/>
+                <FrameD src={require("../static/images/dance2.svg")} />
+                <FrameD src={require("../static/images/dance1a.svg")}/>
             </Animation>
          
             

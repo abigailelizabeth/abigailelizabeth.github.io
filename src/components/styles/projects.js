@@ -489,7 +489,7 @@ const projectEntranceTitle = keyframes`
       right: -100vw;
    }
    100% {
-      right: 40vw;
+      right: 50vw;
    }
 `;
 export const Container = styled.div`
@@ -525,10 +525,10 @@ export const Content = styled.div`
  
 
     @media only screen and (min-width: 768px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        right: 3vw;        
+        height: 90vh;
+        display: block;
+        width: 100vw;
+        overflow-x: hidden;     
     }
 `;
 
@@ -538,31 +538,63 @@ export const Button = styled.button`
     border-radius: 5px;
     padding: 5px;
     margin: 4px;
+    width: 10%;
 
 `;
-
+export const DoodleBox = styled.div`
+    animation: ${projectEntranceTitle} 2s ease-in-out 0s 1;
+    position: relative;
+    height: 1vh;
+    > img {
+        width: 95%;
+    }
+    @media only screen and (min-width: 768px) {
+        position: relative;
+        right: 50vw;
+        height: 5vh;
+        > img {
+            position: absolute;
+            width: 60vw;
+        }
+    }
+`;
 export const Title = styled.h1`
    position: absolute;
-   right: 40vw;
+   right: 35vw;
    display: block;
-   width: 50vw;
    text-align: left;
    color: white;
    font-size: calc(2em + 5vw);
    font-weight: bold;
-   animation: ${projectEntranceTitle} 2s ease-in-out 0s 1;
    @media only screen and (min-width: 768px) {
-        position: absolute;
-        right: 40vw;
         display: block;
-        width: 50vw;
         text-align: left;
+        right: 20vw;
+        top: 5vh;
+        z-index: 1;
         color: white;
-        font-size: calc(.5em + 5vw);
+        font-size: calc(.7em + 3vw);
         font-weight: bold;
         
    }
 
+`;
+export const ProjectStack = styled.div`
+
+   position: relative;
+   width: 40%;
+   left: 0;
+   color: white;
+   text-align: left;
+   margin-left: 5em;
+   ul {
+       list-style: none;
+       li {
+           padding-top: .4em;
+       }
+   }
+   @media only screen and (min-width: 768px) {
+   }
 `;
 export const ProjectDesc = styled.div`
     position: relative;
@@ -573,6 +605,7 @@ export const ProjectDesc = styled.div`
     align-items: center;
     width: 80vw;
     height: 45vh;
+    display: none;
 
     > span {
         font-size: calc(.3em + .8vw);
@@ -585,19 +618,22 @@ export const ProjectDesc = styled.div`
         color: white;
     }
     @media only screen and (min-width: 768px) {
-        position: relative;
-        margin-top: 0vh;
+        position: absolute;
+        margin-top: 5vh;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
         width: 50vw;
-        height: 100vh;
+        height: 100%;
+        right: 10vw;
+        top: 25vh;
+        ${props => props.view? "opacity: 1" : "opacity: 0"};
 
         > span {
             font-size: calc(.3em + .8vw);
             position: absolute;
-            top: 55vh;
+            top: 15vh;
             right: 10vw;
             border: 1px dashed white;
             width: 10vw;
@@ -613,34 +649,65 @@ export const ProjectContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 80vw;
-    top: 10vh;
-
-    justify-content: flex-end;
+    top: 0vh;
+    justify-content: center;
+    > span {
+        display: none;
+    }
+    > button {
+        border: none;
+        border-bottom: 1px solid white;
+        width: 40%;
+        border-radius: 0;
+    }
     
 
     @media only screen and (min-width: 768px) {
+        top: 10vh;
         flex-direction: row;
         justify-content: space-around;
-        width: 90vw;
-        flex-wrap: wrap;
+        align-items: flex-end;
+        overflow-x: hidden;
+        width: 100%;
+        flex-wrap: no-wrap;
+        cursor: none;
+        height: 70%;
         > button {
             background: transparent;
             color: white;
             position: absolute;
             font-size: calc(.2em + .8vw);
-            left: 3vw;
-            top: 25vh;
+            right: 35vw;
+            z-index: 1;
+            cursor: pointer;
+            top: 15vh;
+            border: none;
+            border-bottom: 1px solid white;
             border-radius: 2px;
             padding: 4px;
+            width: 10%;
+        }
+        > span {
+            display: block;
+            font-size: calc(.2em + .8vw);
+            color: white;
+            border-bottom: 1px solid white;
+            position: absolute;
+            padding: 4px;
+            z-index:1;
+            top: 15vh;
+            cursor: pointer;
+            right: 20vw;
+            width: 10%;
         }
     }
 
 `;
 
 export const ProjectWrapper = styled.div`
-        width: 80vw;
+        width: 100vw;
         height: 30vh;
-        background-color: white;
+        top:0;
         border-radius: 5px;
         &:hover {
             cursor: pointer;
@@ -651,18 +718,19 @@ export const ProjectWrapper = styled.div`
         transition-timing-function: ease-in-out; 
 
     @media only screen and (min-width: 768px) {
-        box-shadow: 1px 2px 2px 4px rgba(170, 170, 170, .2);
+        font-size: calc(.2em + .8vw);
+        text-align: left;
         position: relative;
-        width: 30vw;
-        height: 30vh;
-        top: 0vh;
-        background-color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        width: 45%;
+        height: 100%;
         border-radius: 5px; 
     }  
 `;
 export const ProjectPreview = styled.div`
-    height: 100%;
-    width: 100%;
+    width: 80%;
     position: relative;
     border-radius: 5px;
 `;
@@ -749,7 +817,7 @@ export const Component = styled.div`
                 
             }
         }
-        ${props => props.type==="lg-server"? "position: absolute; width: 20vw;top: 70vh; right: 5vw;": ""}
+        ${props => props.type==="lg-server"? "position: absolute; width: 20vw;top: 30vh; right: 5vw;": ""}
 
     }
 `;
@@ -838,7 +906,7 @@ export const TravelSpace = styled.div`
     height: 5vh;
     border-top: 1px dashed white;
     border-bottom: 1px dashed white;
-    ${props => props.type === "watchStream"? "border-bottom: none; position: relative;top: -2vh;" : props.type === "socket"? "border-top: none;position: relative;top: 8vh;" : ""}
+    ${props => props.type === "watchStream"? "border-bottom: none; position: relative;top: 8vh;" : props.type === "socket"? "border-top: none;position: relative;top: 18vh;" : ""}
     @media only screen and (min-width: 768px) {
         width: 10vw;
     }

@@ -171,7 +171,7 @@ export const Animation = styled.div`
     width: 50%;
     position: relative;
 `;
-export const Frame = styled.img`
+export const FrameD = styled.img`
     width: 90%;
     height: auto;
     left: 0;

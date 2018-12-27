@@ -1,18 +1,36 @@
 import React from 'react';
-import { Container, Content, Title, Button, Component, Pencil, Lead, ProjectContainer, ProjectWrapper, ProjectPreview, ProjectDesc, Database, TravelSpace, UsrReq, Bubbles, Bubble, Loading, Envelope, DataStream} from './styles/projects';
+import { Container, Content, ProjectStack,Title, Button, DoodleBox, Component, Pencil, Lead, ProjectContainer, ProjectWrapper, ProjectPreview, ProjectDesc, Database, TravelSpace, UsrReq, Bubbles, Bubble, Loading, Envelope, DataStream} from './styles/projects';
   const Projects = props => {
     return(
         <Container showMenu={props.showMenu} here={props.here}>
-            <Title>Projects</Title>
+            <DoodleBox>
+                <Title>Projects</Title>
+                <img src={require('../static/images/abbyproj.svg')}/>
+                
+            </DoodleBox>
             <Content>
+               
                 {!props.viewProject&&<ProjectContainer>
                     <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
+                    <span onClick={()=> props.toggleDiagram()}>View Diagram</span>
+
+                    <ProjectStack>
+                        <ul>
+                            <li>> React</li>
+                            <li>> Redux</li>
+                            <li>> Express</li>
+                            <li>> MongoDB</li>
+                            <li>> Material UI</li>
+                        </ul>
+                    </ProjectStack>
                     <ProjectWrapper>
+                        {!props.viewDiagram &&
                         <ProjectPreview>
                         <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kerv.gif')}/>
-                        </ProjectPreview>
+                        </ProjectPreview>}
                     </ProjectWrapper>
-                    <ProjectDesc>
+                   
+                    <ProjectDesc view={props.viewDiagram? true : false}>
                         <Component>
                             <p>UI</p>
                             <UsrReq></UsrReq>
@@ -33,15 +51,27 @@ import { Container, Content, Title, Button, Component, Pencil, Lead, ProjectCont
                 </ProjectContainer>}
 
                   {/* next project  */}
-                  {props.viewProject&&<ProjectContainer> 
+                  {props.viewProject&&<ProjectContainer > 
                     <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
-                       <ProjectWrapper>
+                    <span onClick={()=> props.toggleDiagram()}>View Diagram</span>
+                    <ProjectStack>
+                        <ul>
+                            <li>> Express</li>
+                            <li>> MongoDB</li>
+                            <li>> Kafka-Node</li>
+                            <li>> SocketIO</li>
+                            <li>> React</li>
+                            <li>> Redux</li>
+                        </ul>
+                    </ProjectStack>
+                   
+                    <ProjectWrapper>{!props.viewDiagram&&
                           <ProjectPreview>
                           <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kervkue.gif')}/>
-                          </ProjectPreview>
+                          </ProjectPreview>}
                       </ProjectWrapper>
-
-                  <ProjectDesc>
+                   
+                  <ProjectDesc view={props.viewDiagram? true : false}>
                     <Component>
                         <p>UI</p>
                         <DataStream>data </DataStream>

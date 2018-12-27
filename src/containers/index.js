@@ -16,12 +16,16 @@ class Home extends Component {
         lastScroll: 0,
         view: 0,
         showMenu: false,
-        currentView: 0,
+        currentView: 2,
         youHereAlready: false,
-        viewProject: true
+        viewProject: true,
+        viewDiagram: false
     }
     handleViewProject = () => {
-        this.setState(state => ({viewProject: !state.viewProject}))
+        this.setState(state => ({viewProject: !state.viewProject, viewDiagram: false}))
+    }
+    handleViewProjectDiagram = () => {
+        this.setState(state => ({viewDiagram: !state.viewDiagram}))
     }
     handleCancelViewJob = () => {
         this.setState({viewJob: null});
@@ -92,7 +96,7 @@ class Home extends Component {
                 {this.state.currentView=== 0&&<About showMenu={this.state.showMenu} here={this.state.youHereAlready} animateIntro={this.state.animateIntro}hello={this.state.helloAgain}/>}
                 {this.state.currentView === 1&&<Experience showMenu={this.state.showMenu} here={this.state.youHereAlready}viewJob={this.state.viewJob} handleViewJob={this.handleViewJob} viewJobEffort={this.state.viewJobEffort}
                         handleViewJobEffort={this.handleViewJobEffort} handleCancelViewJob={this.handleCancelViewJob} tech={this.state.technical} toggleTechView={this.toggleTechnicalView}/>}
-                {this.state.currentView ===2&& <Projects showMenu={this.state.showMenu} here={this.state.youHereAlready} viewProject={this.state.viewProject} toggleProjectView={this.handleViewProject}/>}
+                {this.state.currentView ===2&& <Projects showMenu={this.state.showMenu} here={this.state.youHereAlready} viewProject={this.state.viewProject} toggleProjectView={this.handleViewProject}  toggleDiagram={this.handleViewProjectDiagram} viewDiagram={this.state.viewDiagram}/>}
                 {this.state.currentView ===3&& <Doodles showMenu={this.state.showMenu} here={this.state.youHereAlready} happyBirthdayJason={this.birthdayView}/>}
                 {this.state.currentView===4 && <Tribute />}
             </Container>
