@@ -16,7 +16,7 @@ class Home extends Component {
         lastScroll: 0,
         view: 0,
         showMenu: false,
-        currentView: 2,
+        currentView: 0,
         youHereAlready: false,
         viewProject: true,
         viewDiagram: false
