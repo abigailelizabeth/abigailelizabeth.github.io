@@ -528,7 +528,35 @@ export const Content = styled.div`
         height: 90vh;
         display: block;
         width: 100vw;
-        overflow-x: hidden;     
+        overflow-x: hidden;
+        > button {
+            background: transparent;
+            color: white;
+            position: absolute;
+            font-size: calc(.2em + .8vw);
+            right: 35vw;
+            z-index: 1;
+            cursor: pointer;
+            top: 15vh;
+            border: none;
+            border-bottom: 1px solid white;
+            border-radius: 2px;
+            padding: 4px;
+            width: 10%;
+        }
+        > span {
+            display: block;
+            font-size: calc(.2em + .8vw);
+            color: white;
+            border-bottom: 1px solid white;
+            position: absolute;
+            padding: 4px;
+            z-index:1;
+            top: 15vh;
+            cursor: pointer;
+            right: 20vw;
+            width: 10%;
+        }     
     }
 `;
 
@@ -672,34 +700,7 @@ export const ProjectContainer = styled.div`
         flex-wrap: no-wrap;
         cursor: none;
         height: 70%;
-        > button {
-            background: transparent;
-            color: white;
-            position: absolute;
-            font-size: calc(.2em + .8vw);
-            right: 35vw;
-            z-index: 1;
-            cursor: pointer;
-            top: 15vh;
-            border: none;
-            border-bottom: 1px solid white;
-            border-radius: 2px;
-            padding: 4px;
-            width: 10%;
-        }
-        > span {
-            display: block;
-            font-size: calc(.2em + .8vw);
-            color: white;
-            border-bottom: 1px solid white;
-            position: absolute;
-            padding: 4px;
-            z-index:1;
-            top: 15vh;
-            cursor: pointer;
-            right: 20vw;
-            width: 10%;
-        }
+       
     }
 
 `;

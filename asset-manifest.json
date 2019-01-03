@@ -1,7 +1,7 @@
 {
   "main.css": "/abigailelizabeth.github.io/static/css/main.424001cb.chunk.css",
-  "main.js": "/abigailelizabeth.github.io/static/js/main.355b9718.chunk.js",
-  "main.js.map": "/abigailelizabeth.github.io/static/js/main.355b9718.chunk.js.map",
+  "main.js": "/abigailelizabeth.github.io/static/js/main.7136304b.chunk.js",
+  "main.js.map": "/abigailelizabeth.github.io/static/js/main.7136304b.chunk.js.map",
   "static/js/1.e4be37fc.chunk.js": "/abigailelizabeth.github.io/static/js/1.e4be37fc.chunk.js",
   "static/js/1.e4be37fc.chunk.js.map": "/abigailelizabeth.github.io/static/js/1.e4be37fc.chunk.js.map",
   "runtime~main.js": "/abigailelizabeth.github.io/static/js/runtime~main.ec8d0e33.js",
@@ -23,6 +23,8 @@
   "static/media/envelope.svg": "/abigailelizabeth.github.io/static/media/envelope.d5331f46.svg",
   "static/media/envelopeopen.svg": "/abigailelizabeth.github.io/static/media/envelopeopen.99555fc6.svg",
   "static/media/socket.svg": "/abigailelizabeth.github.io/static/media/socket.f224057d.svg",
+  "static/media/shuttleme.gif": "/abigailelizabeth.github.io/static/media/shuttleme.95768fa3.gif",
+  "static/media/novoa.gif": "/abigailelizabeth.github.io/static/media/novoa.878995a3.gif",
   "static/media/boygirlone.svg": "/abigailelizabeth.github.io/static/media/boygirlone.d6045b6e.svg",
   "static/media/boygirltwo.svg": "/abigailelizabeth.github.io/static/media/boygirltwo.2edc5174.svg",
   "static/media/dude.svg": "/abigailelizabeth.github.io/static/media/dude.95bdb5ac.svg",
@@ -35,6 +37,6 @@
   "static/media/instagram.svg": "/abigailelizabeth.github.io/static/media/instagram.8e7f0afa.svg",
   "static/css/main.424001cb.chunk.css.map": "/abigailelizabeth.github.io/static/css/main.424001cb.chunk.css.map",
   "index.html": "/abigailelizabeth.github.io/index.html",
-  "precache-manifest.2f7848f034170e86c7c21e1a1609db77.js": "/abigailelizabeth.github.io/precache-manifest.2f7848f034170e86c7c21e1a1609db77.js",
+  "precache-manifest.3d10b44470c4ec0ab7786be32894cbdb.js": "/abigailelizabeth.github.io/precache-manifest.3d10b44470c4ec0ab7786be32894cbdb.js",
   "service-worker.js": "/abigailelizabeth.github.io/service-worker.js"
 }

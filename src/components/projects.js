@@ -6,14 +6,12 @@ import { Container, Content, ProjectStack,Title, Button, DoodleBox, Component, P
             <DoodleBox>
                 <Title>Projects</Title>
                 <img src={require('../static/images/abbyproj.svg')}/>
-                
             </DoodleBox>
             <Content>
-               
-                {!props.viewProject&&<ProjectContainer>
-                    <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
-                    <span onClick={()=> props.toggleDiagram()}>View Diagram</span>
-
+                <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
+                { props.projectView < 2 &&<span onClick={()=> props.toggleDiagram()}>View Diagram</span>}
+                { props.projectView === 0 &&
+                <ProjectContainer>
                     <ProjectStack>
                         <ul>
                             <li>> React</li>
@@ -29,7 +27,6 @@ import { Container, Content, ProjectStack,Title, Button, DoodleBox, Component, P
                         <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kerv.gif')}/>
                         </ProjectPreview>}
                     </ProjectWrapper>
-                   
                     <ProjectDesc view={props.viewDiagram? true : false}>
                         <Component>
                             <p>UI</p>
@@ -51,9 +48,8 @@ import { Container, Content, ProjectStack,Title, Button, DoodleBox, Component, P
                 </ProjectContainer>}
 
                   {/* next project  */}
-                  {props.viewProject&&<ProjectContainer > 
-                    <Button onClick={() => props.toggleProjectView()}>Next Project</Button>
-                    <span onClick={()=> props.toggleDiagram()}>View Diagram</span>
+                  { props.projectView === 1 &&
+                  <ProjectContainer > 
                     <ProjectStack>
                         <ul>
                             <li>> Express</li>
@@ -64,13 +60,11 @@ import { Container, Content, ProjectStack,Title, Button, DoodleBox, Component, P
                             <li>> Redux</li>
                         </ul>
                     </ProjectStack>
-                   
                     <ProjectWrapper>{!props.viewDiagram&&
                           <ProjectPreview>
                           <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/kervkue.gif')}/>
                           </ProjectPreview>}
-                      </ProjectWrapper>
-                   
+                    </ProjectWrapper>
                   <ProjectDesc view={props.viewDiagram? true : false}>
                     <Component>
                         <p>UI</p>
@@ -92,7 +86,43 @@ import { Container, Content, ProjectStack,Title, Button, DoodleBox, Component, P
                     <Component type="lg-server"><p>Zookeeper</p><p>Kafka Server</p></Component>
                     <span>kafka-node</span>
                     </ProjectDesc>
-                  </ProjectContainer> }
+                  </ProjectContainer> 
+                }
+                { props.projectView === 2 && 
+                    <ProjectContainer>
+                        <ProjectStack>
+                            <ul>
+                                <li>> Flask</li>
+                                <li>> HTML5</li>
+                                <li>> CSS3</li>
+                                <li>> DoubleMap API</li>
+                                <li>> Python</li>
+                            </ul>
+                        </ProjectStack>
+                        <ProjectWrapper>{!props.viewDiagram&&
+                            <ProjectPreview>
+                            <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/shuttleme.gif')}/>
+                            </ProjectPreview>}
+                        </ProjectWrapper>
+                    </ProjectContainer>
+                }
+                { props.projectView === 3 && 
+                    <ProjectContainer>
+                        <ProjectStack>
+                            <ul>
+                                <li>> HTML5</li>
+                                <li>> CSS3</li>
+                                <li>> Pure CSS</li>
+                                <li>> Javascript</li>
+                            </ul>
+                        </ProjectStack>
+                        <ProjectWrapper>{!props.viewDiagram&&
+                            <ProjectPreview>
+                            <img alt="something" style={{width: '100%', height: 'auto'}} src={require('../static/images/novoa.gif')}/>
+                            </ProjectPreview>}
+                        </ProjectWrapper>
+                    </ProjectContainer>
+                }
                 </Content>
             </Container>                 
     );
